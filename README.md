@@ -44,7 +44,7 @@ TP1_Grupo_3/
 │   ├── styles.css    <- Estilos principales compartidos
 │   └── pamela.css    <- Estilos de la pagina de Pamela
 ├── js/
-│   └── main.js       <- JavaScript de la portada
+│   └── main.js       <- JavaScript de a portada
 ├── img/
 │   └── img Pamela/   <- Imagenes de la pagina de Pamela
 └── README.md
@@ -83,8 +83,7 @@ correspondiente en la barra de navegacion.
 
 ### Paginas individuales
 
-Las paginas de Gisela, Fernanda y Andrea estan reservadas para que cada integrante
-las desarrolle de forma independiente.
+Las paginas de Gisela, Fernanda y Andrea estan basias
 
 ## Diseño Responsive
 
@@ -102,10 +101,9 @@ El sitio implementa los tres breakpoints obligatorios:
 
 ### En que ayudo
 
-- Generacion de la estructura base de los archivos HTML
-- Escritura y correccion del CSS compartido (variables, grid, responsive, animaciones)
+- Correccion de la estructura base de los archivos HTML
+- Correccion del CSS compartido (grid y animaciones)
 - Correccion y ajuste de las funciones JavaScript
-- Integracion del portfolio individual de Pamela (PFO N1) a la pagina grupal
 - Resolucion de dudas tecnicas sobre CSS y maquetado
 
 Todo el codigo fue revisado, corregido y personalizado por las integrantes del grupo.

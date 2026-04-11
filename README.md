@@ -3,7 +3,7 @@
 **Materia:** Desarrollo de Sistemas Web — Frontend  
 **Instituto:** IFTS N.29  
 **Año:** 2026  
-**Deploy:** [Agregar link de Vercel una vez publicado]
+**Deploy:** [Agregar link de Vercel ak]
 
 ## Descripcion del Proyecto
 

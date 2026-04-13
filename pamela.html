@@ -389,41 +389,15 @@
     function pMaquinaDeEscribir() {
       var elemento = document.getElementById('p-profesion');
       if (!elemento) return;
-      var frases = [
-        'Desarrolladora Full Stack',
-        'Ingeniera Forestal',
-        'Estudiante de Desarrollo de Software'
-      ];
-      var indiceFrase = 0;
-      var indiceLetra = 0;
-      var borrando = false;
-      var pausa = false;
+      var texto = 'Desarrolladora Full Stack · Ing. Forestal · Estudiante de Desarrollo de Software';
+      var indice = 0;
 
       function escribir() {
-        var fraseActual = frases[indiceFrase];
-
-        if (!borrando) {
-          indiceLetra++;
-          elemento.textContent = fraseActual.slice(0, indiceLetra);
-          if (indiceLetra === fraseActual.length) {
-            pausa = true;
-            setTimeout(function() {
-              pausa = false;
-              borrando = true;
-              setTimeout(escribir, 80);
-            }, 1800);
-            return;
-          }
-        } else {
-          indiceLetra--;
-          elemento.textContent = fraseActual.slice(0, indiceLetra);
-          if (indiceLetra === 0) {
-            borrando = false;
-            indiceFrase = (indiceFrase + 1) % frases.length;
-          }
+        if (indice < texto.length) {
+          elemento.textContent = texto.slice(0, indice + 1);
+          indice++;
+          setTimeout(escribir, 55);
         }
-
-        setTimeout(escribir, borrando ? 45 : 80);
       }
 
       escribir();

@@ -88,9 +88,29 @@ de una lista de frases. El boton cambia su texto a "Otro saludo" para invitar a 
 Se ejecuta automaticamente al cargar la pagina. Detecta la URL actual y resalta el link
 correspondiente en la barra de navegacion.
 
+### Pagina de Pamela (pamela.html)
+
+**pMaquinaDeEscribir()**  
+Al cargar la pagina, el texto de la profesion aparece escrito caracter por caracter, simulando
+una maquina de escribir. El efecto se ejecuta una sola vez y el texto queda fijo al terminar.
+Un cursor parpadeante acompaña el texto durante y despues de la animacion.
+
+![Efecto en proceso](img/img%20Pamela/Hero_efecto_JS.jpg)
+![Efecto finalizado](img/img%20Pamela/Hero_fin_efecto_js.jpg)
+
+**pEstrellasFugaces()**  
+Al cargar la pagina, se genera un efecto continuo de estrellas fugaces sobre el fondo del hero,
+dibujadas en un canvas con trayectoria diagonal y desvanecimiento progresivo.
+
+**pEnviarFormulario()**  
+Al completar y enviar el formulario de contacto, se muestra un mensaje de confirmacion
+sin recargar la pagina. El formulario se limpia automaticamente al enviarse.
+
+![Formulario de contacto](img/img%20Pamela/formulario_de_contactos.jpg)
+
 ### Paginas individuales
 
-Las paginas de Gisela, Fernanda y Andrea estan basias
+Las paginas de Gisela, Fernanda y Andrea estan en desarrollo.
 
 ## Diseño Responsive
 

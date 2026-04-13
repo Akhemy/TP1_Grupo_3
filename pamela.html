@@ -38,7 +38,7 @@
             class="p-hero-avatar"
           >
           <h1 class="p-hero-titulo">Pamela Olave</h1>
-          <p class="p-hero-profesion">Desarrolladora Full Stack · Ing. Forestal · Estudiante de Desarrollo de Software</p>
+          <p class="p-hero-profesion" id="p-profesion"></p>
           <p class="p-hero-profesion" style="font-size:0.65rem; letter-spacing:0.2em; margin-bottom:0.6rem;">Mar del Plata · 43 años</p>
           <p class="p-hero-bio">
             Quiero dar soluciones integrales a las necesidades de mis futuros clientes,
@@ -386,6 +386,50 @@
       animar();
     }
 
+    function pMaquinaDeEscribir() {
+      var elemento = document.getElementById('p-profesion');
+      if (!elemento) return;
+      var frases = [
+        'Desarrolladora Full Stack',
+        'Ingeniera Forestal',
+        'Estudiante de Desarrollo de Software'
+      ];
+      var indiceFrase = 0;
+      var indiceLetra = 0;
+      var borrando = false;
+      var pausa = false;
+
+      function escribir() {
+        var fraseActual = frases[indiceFrase];
+
+        if (!borrando) {
+          indiceLetra++;
+          elemento.textContent = fraseActual.slice(0, indiceLetra);
+          if (indiceLetra === fraseActual.length) {
+            pausa = true;
+            setTimeout(function() {
+              pausa = false;
+              borrando = true;
+              setTimeout(escribir, 80);
+            }, 1800);
+            return;
+          }
+        } else {
+          indiceLetra--;
+          elemento.textContent = fraseActual.slice(0, indiceLetra);
+          if (indiceLetra === 0) {
+            borrando = false;
+            indiceFrase = (indiceFrase + 1) % frases.length;
+          }
+        }
+
+        setTimeout(escribir, borrando ? 45 : 80);
+      }
+
+      escribir();
+    }
+
+    pMaquinaDeEscribir();
     pEstrellasFugaces();
   </script>
 

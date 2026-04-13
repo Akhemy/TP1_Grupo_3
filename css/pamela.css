@@ -84,6 +84,17 @@
   text-shadow: 0 2px 40px rgba(200, 162, 50, 0.35);
 }
 
+#p-profesion::after {
+  content: '|';
+  color: #c8a232;
+  animation: p-parpadeo 0.8s step-end infinite;
+}
+
+@keyframes p-parpadeo {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 .p-hero-profesion {
   font-family: 'Cinzel', serif;
   font-size: clamp(0.75rem, 2vw, 1rem);

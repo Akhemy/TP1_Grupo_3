@@ -54,31 +54,6 @@
   padding: 6rem 2rem 4rem;
 }
 
-.p-hero-overlay::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(700px, 90vw);
-  height: min(700px, 90vw);
-  border-radius: 50%;
-  border: 1px solid rgba(200, 162, 50, 0.12);
-  pointer-events: none;
-}
-
-.p-hero-overlay::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(500px, 65vw);
-  height: min(500px, 65vw);
-  border-radius: 50%;
-  border: 1px solid rgba(200, 162, 50, 0.08);
-  pointer-events: none;
-}
 
 .p-hero-contenido {
   text-align: center;

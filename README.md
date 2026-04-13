@@ -73,8 +73,11 @@ TP1_Grupo_3/
 
 No se utilizan librerias de iconos. Respecto a las imagenes:
 
+- **Agregar ak:** 
+
 - **Pamela Olave:** avatar generado a partir de una foto personal real.
-- **Resto de integrantes:** imagenes obtenidas de internet, utilizadas con fines academicos.
+- 
+- ** o ak:** 
 
 ## JavaScript — Funciones Implementadas
 
@@ -110,7 +113,7 @@ sin recargar la pagina. El formulario se limpia automaticamente al enviarse.
 
 ### Paginas individuales
 
-Las paginas de Gisela, Fernanda y Andrea estan en desarrollo.
+**************************************
 
 ## Diseño Responsive
 

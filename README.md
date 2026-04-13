@@ -69,6 +69,13 @@ TP1_Grupo_3/
 - **DM Serif Display** — titulos y encabezados
 - **DM Sans** — cuerpo de texto
 
+### Iconografia
+
+No se utilizan librerias de iconos. Respecto a las imagenes:
+
+- **Pamela Olave:** avatar generado a partir de una foto personal real.
+- **Resto de integrantes:** imagenes obtenidas de internet, utilizadas con fines academicos.
+
 ## JavaScript — Funciones Implementadas
 
 ### Portada (index.html)

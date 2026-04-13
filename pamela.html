@@ -29,6 +29,7 @@
          HERO — Presentacion personal
     ============================================================ -->
     <section id="sobre-mi" class="p-hero">
+      <canvas id="p-estrellas"></canvas>
       <div class="p-hero-overlay">
         <div class="p-hero-contenido">
           <img
@@ -281,6 +282,71 @@
         if (destino) destino.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    function pEstrellasFugaces() {
+      var canvas = document.getElementById('p-estrellas');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var estrellas = [];
+
+      function redimensionar() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      redimensionar();
+      window.addEventListener('resize', redimensionar);
+
+      function crearEstrella() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height * 0.6,
+          largo: Math.random() * 90 + 50,
+          velocidad: Math.random() * 4 + 3,
+          opacidad: 1,
+          angulo: Math.PI / 4
+        };
+      }
+
+      function animar() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (Math.random() < 0.04) {
+          estrellas.push(crearEstrella());
+        }
+
+        estrellas = estrellas.filter(function(e) { return e.opacidad > 0; });
+
+        estrellas.forEach(function(estrella) {
+          estrella.x += Math.cos(estrella.angulo) * estrella.velocidad;
+          estrella.y += Math.sin(estrella.angulo) * estrella.velocidad;
+          estrella.opacidad -= 0.012;
+
+          var degradado = ctx.createLinearGradient(
+            estrella.x, estrella.y,
+            estrella.x - Math.cos(estrella.angulo) * estrella.largo,
+            estrella.y - Math.sin(estrella.angulo) * estrella.largo
+          );
+          degradado.addColorStop(0, 'rgba(232, 192, 80, ' + estrella.opacidad + ')');
+          degradado.addColorStop(1, 'rgba(232, 192, 80, 0)');
+
+          ctx.beginPath();
+          ctx.moveTo(estrella.x, estrella.y);
+          ctx.lineTo(
+            estrella.x - Math.cos(estrella.angulo) * estrella.largo,
+            estrella.y - Math.sin(estrella.angulo) * estrella.largo
+          );
+          ctx.strokeStyle = degradado;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        });
+
+        requestAnimationFrame(animar);
+      }
+
+      animar();
+    }
+
+    pEstrellasFugaces();
   </script>
 
 </body>

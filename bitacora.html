@@ -1,94 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitacora — Grupo 3</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitácora — Grupo 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navegacion: permite moverse sin usar el boton "Atras" -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">Grupo 3</div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="bitacora.html" class="nav-link activo">Bitácora</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Navegacion: permite moverse sin usar el boton "Atras" -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo">Grupo 3</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="bitacora.html" class="nav-link activo">Bitacora</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <!--   ENCABEZADO DE BITACORA   -->
-    <div class="pagina-header">
-      <h1 class="pagina-nombre">Bitacora del Proyecto</h1>
-      <p class="pagina-rol">Registro del proceso de desarrollo — TP1 Grupal</p>
-      <a href="index.html" class="btn-volver">Volver al inicio</a>
-    </div>
-
-    <div class="pagina-contenido">
-
-      <!--  ENTRADAS DE LA BITACORA  -->
-
-      <div class="bitacora-entrada">
-        <p class="bitacora-fecha">Abril 2026 — Inicio del proyecto</p>
-        <h2 class="bitacora-subtitulo">Organizacion del equipo y estructura del sitio</h2>
-        <p class="bitacora-texto">
-          El primer paso fue armar una base (quizas usar los portafolios personales del pfo anterior)
+    <main>
+      <!--   ENCABEZADO DE BITÁCORA   -->
+      <div class="pagina-header">
+        <h1 class="pagina-nombre">Bitácora del proyecto</h1>
+        <p class="pagina-rol">
+          Registro del proceso de desarrollo — TP1 Grupal
         </p>
-      </div>
-
-      <div class="bitacora-entrada">
-        <p class="bitacora-fecha">Abril 2026 — Decisiones de diseño</p>
-        <h2 class="bitacora-subtitulo">Eleccion de la estetica y las tipografias</h2>
-        <p class="bitacora-texto">
-          POR DEFINIR        </p>
-      </div>
-
-      <div class="bitacora-entrada">
-        <p class="bitacora-fecha">Abril 2026 — Implementacion</p>
-        <h2 class="bitacora-subtitulo">Estructura de archivos y responsive design</h2>
-        <p class="bitacora-texto">
-           Organizamos los archivos siguiendo las buenas practicas pedidas: HTML en la raiz,
-          CSS en la carpeta css/, JavaScript en la carpeta js/ e imagenes en img/.
-          Implementamos tres breakpoints con media queries: 400px para moviles pequeños,
-          900px para tablets y 1200px para pantallas grandes. La grilla de integrantes
-          pasa de 4 columnas a 2 y luego a 1 segun el tamaño de pantalla.
-        </p>
-      </div>
-
-      <div class="bitacora-entrada">
-        <p class="bitacora-fecha">Abril 2026 — Dificultades</p>
-        <h2 class="bitacora-subtitulo">Problemas encontrados y como se resolvieron</h2>
-        <p class="bitacora-texto">
-          POR DEFINIR
-        </p>
-      </div>
-
-
-      <!-- Navegacion al final -->
-      <div style="text-align:center; margin-top:3rem;">
         <a href="index.html" class="btn-volver">Volver al inicio</a>
       </div>
 
-    </div>
-  </main>
+      <div class="pagina-contenido">
+        <!--  ENTRADAS DE LA BITÁCORA  -->
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
-      <p class="footer-materia">Desarrollo de Sistemas Web — Frontend — 2026</p>
-      <nav class="footer-nav">
-        <a href="index.html" class="footer-link">Inicio</a>
-        <a href="bitacora.html" class="footer-link">Bitacora</a>
-      </nav>
-    </div>
-  </footer>
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril 2026 — Inicio del proyecto</p>
+          <h2 class="bitacora-subtitulo">
+            Organización del equipo y estructura del sitio
+          </h2>
+          <p class="bitacora-texto">
+            El primer paso fue armar una base, usando los portafolios personales
+            del PFO individual anterior.
+          </p>
+        </div>
 
-</body>
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril 2026 — Decisiones de diseño</p>
+          <h2 class="bitacora-subtitulo">
+            Elección de la estética y las tipografías
+          </h2>
+          <p class="bitacora-texto">POR DEFINIR</p>
+        </div>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril 2026 — Implementación</p>
+          <h2 class="bitacora-subtitulo">
+            Estructura de archivos y responsive design
+          </h2>
+          <p class="bitacora-texto">
+            Organizamos los archivos siguiendo las buenas prácticas pedidas:
+            HTML en la raiz, CSS en la carpeta css/, JavaScript en la carpeta
+            js/ e imagenes en img/. Implementamos tres breakpoints con media
+            queries: 400px para moviles pequeños, 900px para tablets y 1200px
+            para pantallas grandes. La grilla de integrantes pasa de 4 columnas
+            a 2 y luego a 1 segun el tamaño de pantalla.
+          </p>
+        </div>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril 2026 — Dificultades</p>
+          <h2 class="bitacora-subtitulo">
+            Problemas encontrados y cómo se resolvieron
+          </h2>
+          <p class="bitacora-texto">POR DEFINIR</p>
+        </div>
+
+        <!-- Navegacion al final -->
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="index.html" class="btn-volver">Volver al inicio</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
+        <p class="footer-materia">
+          Desarrollo de Sistemas Web — Frontend — 2026
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="bitacora.html" class="footer-link">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

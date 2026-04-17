@@ -1,158 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupo 3 — IFTS N.29</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo 3 — IFTS N.29</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER: navegacion principal -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">Grupo 3</div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link activo">Inicio</a>
+          <a href="bitacora.html" class="nav-link">Bitácora</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- HEADER: navegacion principal -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo">Grupo 3</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link activo">Inicio</a>
-        <a href="bitacora.html" class="nav-link">Bitacora</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- 
+    <main>
+      <!-- 
          HERO: presentacion principal del grupo -->
-    <section class="hero">
-      <div class="hero-contenido">
-        <p class="hero-subtitulo">IFTS N.29 — Desarrollo de Software Frontend</p>
-        <h1 class="hero-titulo">Grupo 3</h1>
-        <p class="hero-descripcion">
-          Somos un equipo de cuatro estudiantes de la materia Desarrollo de Sistemas Web (Front End).
-          Este sitio reune nuestros portafolios individuales, construidos con HTML5, CSS3 y JavaScript,
-          como parte del Trabajo Practico Grupal N.1.
-        </p>
-        <!-- Boton con interaccion Javacript -->
-        <button class="btn-saludo" id="btnSaludo" onclick="mostrarSaludo()">Conocenos</button>
-        <p class="mensaje-saludo" id="mensajeSaludo"></p>
-      </div>
-    </section>
+      <section class="hero">
+        <div class="hero-contenido">
+          <p class="hero-subtitulo">
+            IFTS N.29 — Desarrollo de Software Frontend
+          </p>
+          <h1 class="hero-titulo">Grupo 3</h1>
+          <p class="hero-descripcion">
+            Somos un equipo de cinco estudiantes de la materia Desarrollo de
+            Sistemas Web (Front End). Este sitio reúne nuestros portafolios
+            individuales, construídos con HTML5, CSS3 y JavaScript, como parte
+            del Trabajo Práctico Grupal N.1. El propósito de este proyecto es
+            mostrar nuestras habilidades y, al mismo tiempo, nuestras
+            personalidades a través de las páginas individuales. ¡Esperamos que
+            lo disfruten!
+          </p>
+          <!-- Boton con interaccion Javacript -->
+          <button class="btn-saludo" id="btnSaludo" onclick="mostrarSaludo()">
+            Conocenos
+          </button>
+          <p class="mensaje-saludo" id="mensajeSaludo"></p>
+        </div>
+      </section>
 
-    <!-- 
+      <!-- 
          INTEGRANTES: links a cada pagina individual (hay q migrar el codigo ak)-->
-    <section class="integrantes" id="integrantes">
-      <div class="seccion-contenido">
-        <h2 class="seccion-titulo">Nuestro Equipo</h2>
-        <p class="seccion-subtitulo">Hace clic en una integrante para ver su portafolio individual</p>
+      <section class="integrantes" id="integrantes">
+        <div class="seccion-contenido">
+          <h2 class="seccion-titulo">Nuestro equipo</h2>
+          <p class="seccion-subtitulo">
+            Hacé clic en un/a integrante para ver su portafolio individual
+          </p>
 
-        <div class="grilla-integrantes">
+          <div class="grilla-integrantes">
+            <!-- Tarjeta Gisela -->
+            <article class="tarjeta-integrante">
+              <div class="tarjeta-avatar">
+                <img
+                  class="avatar-img"
+                  src="img/gisela.jpg"
+                  alt="Foto de Gisela"
+                />
+              </div>
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-nombre">Gisela Croci</h3>
+                <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
+                <a href="gisela.html" class="btn-ver-portfolio">Me presento</a>
+              </div>
+            </article>
 
-          <!-- Tarjeta Gisela -->
-          <article class="tarjeta-integrante">
-            <div class="tarjeta-avatar">
-              <img class="avatar-img" src="img/gisela.jpg" alt="Foto de Gisela">
-            </div>
-            <div class="tarjeta-info">
-              <h3 class="tarjeta-nombre">Gisela Croci</h3>
-              <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
-              <a href="gisela.html" class="btn-ver-portfolio">Me presento</a>
-            </div>
-          </article>
+            <!-- Tarjeta Fernanda -->
+            <article class="tarjeta-integrante">
+              <div class="tarjeta-avatar">
+                <img
+                  class="avatar-img"
+                  src="img/fernanda.jpg"
+                  alt="Foto de Fernanda"
+                />
+              </div>
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-nombre">Fernanda Flores</h3>
+                <p class="tarjeta-rol">
+                  Estudiante de Desarrollo de Software. Lic. en Filosofía y
+                  docente universitaria.
+                </p>
+                <a href="fernanda.html" class="btn-ver-portfolio"
+                  >Me presento</a
+                >
+              </div>
+            </article>
 
-          <!-- Tarjeta Fernanda -->
-          <article class="tarjeta-integrante">
-            <div class="tarjeta-avatar">
-              <img class="avatar-img" src="img/fernanda.jpg" alt="Foto de Fernanda">
-            </div>
-            <div class="tarjeta-info">
-              <h3 class="tarjeta-nombre">Fernanda Flores</h3>
-              <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
-              <a href="fernanda.html" class="btn-ver-portfolio">Me presento</a>
-            </div>
-          </article>
+            <!-- Tarjeta Pamela -->
+            <article class="tarjeta-integrante">
+              <div class="tarjeta-avatar">
+                <img
+                  class="avatar-img"
+                  src="img/img Pamela/pamela.jpg"
+                  alt="Foto de Pamela"
+                />
+              </div>
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-nombre">Pamela Olave</h3>
+                <p class="tarjeta-rol">
+                  Desarrolladora Full Stack, Estudiante de Desarrollo de
+                  Software, Ing Forestal
+                </p>
+                <a href="pamela.html" class="btn-ver-portfolio">Me presento</a>
+              </div>
+            </article>
 
-          <!-- Tarjeta Pamela -->
-          <article class="tarjeta-integrante destacada">
-            <div class="tarjeta-avatar">
-              <img class="avatar-img" src="img/img Pamela/pamela.jpg" alt="Foto de Pamela">
-            </div>
-            <div class="tarjeta-info">
-              <h3 class="tarjeta-nombre">Pamela Olave</h3>
-              <p class="tarjeta-rol">Desarrolladora Full Stack, Estudiante de Desarrollo de Software, Ing Forestal</p>
-              <a href="pamela.html" class="btn-ver-portfolio">Me presento</a>
-            </div>
-          </article>
+            <!-- Tarjeta Andrea -->
+            <article class="tarjeta-integrante">
+              <div class="tarjeta-avatar">
+                <img
+                  class="avatar-img"
+                  src="img/andrea.jpg"
+                  alt="Foto de Andrea"
+                />
+              </div>
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-nombre">Andrea Maccan</h3>
+                <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
+                <a href="andrea.html" class="btn-ver-portfolio">Me presento</a>
+              </div>
+            </article>
 
-          <!-- Tarjeta Andrea -->
-          <article class="tarjeta-integrante">
-            <div class="tarjeta-avatar">
-              <img class="avatar-img" src="img/andrea.jpg" alt="Foto de Andrea">
-            </div>
-            <div class="tarjeta-info">
-              <h3 class="tarjeta-nombre">Andrea Maccan</h3>
-              <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
-              <a href="andrea.html" class="btn-ver-portfolio">Me presento</a>
-            </div>
-          </article>
-
+            <!-- Tarjeta Guillermo -->
+            <article class="tarjeta-integrante">
+              <div class="tarjeta-avatar">
+                <img
+                  class="avatar-img"
+                  src="img/guillermo.jpg"
+                  alt="Foto de Guillermo"
+                />
+              </div>
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-nombre">Guillermo</h3>
+                <p class="tarjeta-rol">Estudiante de Desarrollo de Software</p>
+                <a href="guillermo.html" class="btn-ver-portfolio"
+                  >Me presento</a
+                >
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TECNOLOGIAS  -->
-    <section class="tecnologias" id="tecnologias">
-      <div class="seccion-contenido">
-        <h2 class="seccion-titulo">Tecnologias del Proyecto</h2>
-        <div class="tech-grilla">
-          <div class="tech-item">
-            <span class="tech-nombre">HTML5</span>
-            <span class="tech-desc">Estructura semantica</span>
-          </div>
-          <div class="tech-item">
-            <span class="tech-nombre">CSS3</span>
-            <span class="tech-desc">Estilos y responsive</span>
-          </div>
-          <div class="tech-item">
-            <span class="tech-nombre">JavaScript</span>
-            <span class="tech-desc">Interactividad</span>
-          </div>
-          <div class="tech-item">
-            <span class="tech-nombre">Google Fonts</span>
-            <span class="tech-desc">Tipografia</span>
-          </div>
-          <div class="tech-item">
-            <span class="tech-nombre">GitHub</span>
-            <span class="tech-desc">Control de versiones</span>
-          </div>
-          <div class="tech-item">
-            <span class="tech-nombre">Vercel</span>
-            <span class="tech-desc">Publicacion en la nube</span>
+      <!-- TECNOLOGIAS  -->
+      <section class="tecnologias" id="tecnologias">
+        <div class="seccion-contenido">
+          <h2 class="seccion-titulo">Tecnologías del proyecto</h2>
+          <div class="tech-grilla">
+            <div class="tech-item">
+              <span class="tech-nombre">HTML5</span>
+              <span class="tech-desc">Estructura semántica</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-nombre">CSS3</span>
+              <span class="tech-desc">Estilos y responsive</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-nombre">JavaScript</span>
+              <span class="tech-desc">Interactividad</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-nombre">Google Fonts</span>
+              <span class="tech-desc">Tipografía</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-nombre">GitHub</span>
+              <span class="tech-desc">Control de versiones</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-nombre">Vercel</span>
+              <span class="tech-desc">Publicación en la nube</span>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <!--    FOOTER:   -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
+        <p class="footer-materia">
+          Desarrollo de Sistemas Web — Frontend — 2026
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="bitacora.html" class="footer-link">Bitácora</a>
+        </nav>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <!--    FOOTER:   -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
-      <p class="footer-materia">Desarrollo de Sistemas Web — Frontend — 2026</p>
-      <nav class="footer-nav">
-        <a href="index.html" class="footer-link">Inicio</a>
-        <a href="bitacora.html" class="footer-link">Bitacora</a>
-      </nav>
-    </div>
-  </footer>
-
-  <!-- Archivo JavaScript separado, como pide el TP -->
-  <script src="js/main.js"></script>
-
-</body>
+    <!-- Archivo JavaScript separado, como pide el TP -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

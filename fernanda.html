@@ -1,40 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fernanda Flores — Grupo 3</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernanda Flores — Grupo 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fernanda.css" />
+  </head>
 
   <header class="header">
     <div class="header-inner">
       <div class="logo">Grupo 3</div>
       <nav class="nav">
         <a href="index.html" class="nav-link">Inicio</a>
-        <a href="bitacora.html" class="nav-link">Bitacora</a>
+        <a href="bitacora.html" class="nav-link">Bitácora</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <h1>Fernanda Flores</h1>
-  </main>
+  <body>
+    <main>
+      <section class="page-hero">
+        <div class="page-hero__tag">Portfolio · 2026</div>
+        <h1 class="page-hero__name">Fernanda<br /><em>Flores</em></h1>
+        <p class="page-hero__role">Docente / Desarrolladora</p>
+      </section>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
-      <p class="footer-materia">Desarrollo de Sistemas Web — Frontend — 2026</p>
-      <nav class="footer-nav">
-        <a href="index.html" class="footer-link">Inicio</a>
-        <a href="bitacora.html" class="footer-link">Bitacora</a>
-      </nav>
-    </div>
-  </footer>
+      <!-- SOBRE MÍ -->
+      <section class="about" id="sobre-mi">
+        <div class="about__label">001 — Sobre mí</div>
+        <div class="about__content">
+          <div class="about__photo">
+            <img
+              src="img/fernanda.jpg"
+              alt="Foto de perfil de Fernanda Flores"
+            />
+          </div>
+          <div class="about__text">
+            <p class="about__bio">
+              Soy Fer, tengo 36 años y vivo en Córdoba capital. Soy licenciada
+              en filosofía y docente universitaria de dicha asignatura. Hace 4
+              años comencé a estudiar programación y actualmente hago sitios de
+              modo freelance. Amo los gatitos (tengo 2) y me encanta el café.
+            </p>
+            <div class="about__links">
+              <a href="https://www.instagram.com/ferffloress/" target="_blank"
+                >Instagram</a
+              >
+              <a href="mailto:fer.flores.rd@gmail.com">Correo</a>
+              <a href="https://www.linkedin.com/in/ferffloress/" target="_blank"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <div class="divider"></div>
+
+      <!-- PELÍCULAS -->
+      <section class="section" id="cine">
+        <div class="section__label">002 — Películas favoritas</div>
+        <div class="section__title-row">
+          <h2>Cine</h2>
+          <span class="section__subtitle"
+            >Las que me parecen obras maestras</span
+          >
+        </div>
+
+        <div class="movies-grid">
+          <div class="movie movie--featured">
+            <div class="movie__number">01</div>
+            <div class="movie__info">
+              <h3 class="movie__title">In the Mood for Love</h3>
+              <p class="movie__meta">Wong Kar-wai · 2000</p>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie__number">02</div>
+            <div class="movie__info">
+              <h3 class="movie__title">2001: A Space Odyssey</h3>
+              <p class="movie__meta">Stanley Kubrick · 1968</p>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie__number">03</div>
+            <div class="movie__info">
+              <h3 class="movie__title">The Thing</h3>
+              <p class="movie__meta">John Carpenter · 1982</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCOS -->
+      <section class="section" id="musica">
+        <div class="section__label">003 — Discos favoritos</div>
+        <div class="section__title-row">
+          <h2>Música</h2>
+          <span class="section__subtitle">Los que suenan en loop</span>
+        </div>
+
+        <div class="albums-grid">
+          <div class="album" data-album="Powerslave" data-artist="Iron Maiden">
+            <div class="album__cover">
+              <span>P</span>
+            </div>
+            <div class="album__info">
+              <h3 class="album__title">Powerslave</h3>
+              <p class="album__artist">Iron Maiden</p>
+              <p class="album__year">1984</p>
+            </div>
+          </div>
+
+          <div class="album" data-album="Dirt" data-artist="Alice in Chains">
+            <div class="album__cover">
+              <span>D</span>
+            </div>
+            <div class="album__info">
+              <h3 class="album__title">Dirt</h3>
+              <p class="album__artist">Alice in Chains</p>
+              <p class="album__year">1992</p>
+            </div>
+          </div>
+
+          <div
+            class="album"
+            data-album="City of Evil"
+            data-artist="Avenged Sevenfold"
+          >
+            <div class="album__cover">
+              <span>C</span>
+            </div>
+            <div class="album__info">
+              <h3 class="album__title">City of Evil</h3>
+              <p class="album__artist">Avenged Sevenfold</p>
+              <p class="album__year">2005</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CURIOSIDAD -->
+      <section class="section curiosity" id="dato-random">
+        <div class="section__label">004 — Curiosidad</div>
+        <div class="section__title-row">
+          <h2>Dato random</h2>
+        </div>
+        <div class="curiosity__content">
+          <p class="curiosity__text">
+            Este ejercicio ya lo hice hace 4 años, cuando no existía el vibe
+            coding y daba mis primeros pasos en programación.
+          </p>
+          <div class="curiosity__links">
+            <a
+              href="https://clever-toffee-3e85ac.netlify.app/"
+              target="_blank"
+              class="curiosity__link"
+            >
+              <span class="curiosity__link-label">Deploy</span>
+              <span class="curiosity__link-arrow">↗</span>
+            </a>
+            <a
+              href="https://github.com/ferffloress/id-card/"
+              target="_blank"
+              class="curiosity__link"
+            >
+              <span class="curiosity__link-label">Repositorio en GitHub</span>
+              <span class="curiosity__link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CONTACTO -->
+      <section class="section" id="contacto">
+        <div class="section__label">005 — Contacto</div>
+        <div class="section__title-row">
+          <h2>Escribime</h2>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="contact-form__field">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Tu apellido"
+                required
+              />
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="correo@ejemplo.com"
+                required
+              />
+            </div>
+            <div class="contact-form__field">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 9 351 000 0000"
+              />
+            </div>
+          </div>
+          <button type="submit" class="contact-form__submit">
+            Enviar mensaje ↗
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
+        <p class="footer-materia">
+          Desarrollo de Sistemas Web — Frontend — 2026
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="bitacora.html" class="footer-link">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Nav activa según scroll
+      const navLinks = document.querySelectorAll(".nav a");
+      const sections = document.querySelectorAll("section[id]");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => link.classList.remove("active"));
+              const active = document.querySelector(
+                `.nav a[href="#${entry.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+
+      sections.forEach((s) => observer.observe(s));
+    </script>
+
+    <script>
+      document.querySelectorAll(".album[data-album]").forEach(async (el) => {
+        const album = el.dataset.album;
+        const artist = el.dataset.artist;
+        const cover = el.querySelector(".album__cover");
+
+        try {
+          const res = await fetch(
+            `https://itunes.apple.com/search?term=${encodeURIComponent(artist + " " + album)}&entity=album&limit=1`,
+          );
+          const data = await res.json();
+          const art = data.results?.[0]?.artworkUrl100;
+          if (art) {
+            const url = art.replace("100x100bb", "600x600bb");
+            cover.innerHTML = `<img src="${url}" alt="${album}" />`;
+          }
+        } catch (_) {
+          // mantiene la letra de fallback
+        }
+      });
+    </script>
+  </body>
 </html>

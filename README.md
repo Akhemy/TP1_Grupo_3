@@ -1,36 +1,37 @@
-# Grupo 3 — Trabajo Practico Grupal 1
+# Grupo 3 — Trabajo Práctico Grupal 1
 
 **Materia:** Desarrollo de Sistemas Web — Frontend  
 **Instituto:** IFTS N.29  
 **Año:** 2026  
 **Deploy:** [Agregar link de Vercel ak]
 
-## Descripcion del Proyecto
+## Descripción del proyecto
 
 La consigna del TP1 es realizar un sitio web grupal que integra los portfolios individuales
-de las cuatro integrantes del Grupo 3. La portada presenta al equipo con links a cada pagina
-individual, y el sitio incluye ademas una bitacora con el registro del proceso de desarrollo.
-El proyecto fue construido unicamente con HTML5, CSS3 y JavaScript, sin frameworks externos.
+de los cinco integrantes del Grupo 3. La portada presenta al equipo con links a cada página
+individual, y el sitio incluye además una bitácora con el registro del proceso de desarrollo.
+El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin frameworks externos.
 
 ## Integrantes
 
-| Nombre | GitHub |
-|--------|--------|
-| Gisela Croci | [giselac89](https://github.com/giselac89) |
+| Nombre          | GitHub                                        |
+| --------------- | --------------------------------------------- |
+| Gisela Croci    | [giselac89](https://github.com/giselac89)     |
 | Fernanda Flores | [ferffloress](https://github.com/ferffloress) |
-| Pamela Olave | [Akhemy](https://github.com/Akhemy) |
-| Andrea Maccan | [acmaccan](https://github.com/acmaccan) |
+| Pamela Olave    | [Akhemy](https://github.com/Akhemy)           |
+| Andrea Maccan   | [acmaccan](https://github.com/acmaccan)       |
+| Guillermo       | [xxxxxxx](https://github.com/completar!!)     |
 
-## Tecnologias Utilizadas
+## Tecnologías utilizadas
 
 - HTML5
 - CSS3 (Flexbox, Grid, Media Queries, Variables CSS)
-- JavaScript (funciones dinamicas sin frameworks)
+- JavaScript (funciones dinámicas sin frameworks)
 - Google Fonts (DM Serif Display + DM Sans)
 - GitHub (control de versiones)
-- Vercel (publicacion en la nube)
+- Vercel (publicación en la nube)
 
-## Estructura de Archivos
+## Estructura de archivos
 
 ```
 TP1_Grupo_3/
@@ -54,87 +55,87 @@ TP1_Grupo_3/
 
 ### Paleta de Colores
 
-| Uso | Codigo |
-|-----|--------|
-| Fondo principal | `#111111` |
+| Uso                     | Codigo    |
+| ----------------------- | --------- |
+| Fondo principal         | `#111111` |
 | Fondo medio (secciones) | `#1a1a1a` |
-| Fondo tarjetas | `#222222` |
-| Acento dorado | `#c8a96e` |
-| Dorado claro (hover) | `#e0c99a` |
-| Texto principal | `#f0f0f0` |
-| Texto suave | `#999999` |
+| Fondo tarjetas          | `#222222` |
+| Acento dorado           | `#c8a96e` |
+| Dorado claro (hover)    | `#e0c99a` |
+| Texto principal         | `#f0f0f0` |
+| Texto suave             | `#999999` |
 
-### Tipografias (Google Fonts)
+### Tipografías (Google Fonts)
 
-- **DM Serif Display** — titulos y encabezados
+- **DM Serif Display** — títulos y encabezados
 - **DM Sans** — cuerpo de texto
 
-### Iconografia
+### Iconografía
 
-No se utilizan librerias de iconos. Respecto a las imagenes:
+No se utilizan librerías de íconos. Respecto a las imágenes:
 
 - **Pamela Olave:** avatar generado a partir de una foto personal real.
 - **Resto de integrantes:** imagenes obtenidas de internet, utilizadas con fines academicos.
 
-## JavaScript — Funciones Implementadas
+## JavaScript — Funciones implementadas
 
 ### Portada (index.html)
 
 **mostrarSaludo()**  
-Al hacer clic en el boton "Conocenos", muestra un mensaje de bienvenida elegido al azar
-de una lista de frases. El boton cambia su texto a "Otro saludo" para invitar a repetir la accion.
+Al hacer clic en el botón "Conocenos", muestra un mensaje de bienvenida elegido al azar
+de una lista de frases. El botón cambia su texto a "Otro saludo" para invitar a repetir la acción.
 
 **marcarLinkActivo()**  
-Se ejecuta automaticamente al cargar la pagina. Detecta la URL actual y resalta el link
-correspondiente en la barra de navegacion.
+Se ejecuta automaticamente al cargar la página. Detecta la URL actual y resalta el link
+correspondiente en la barra de navegación.
 
-### Pagina de Pamela (pamela.html)
+### Página de Pamela (pamela.html)
 
 **pMaquinaDeEscribir()**  
-Al cargar la pagina, el texto de la profesion aparece escrito caracter por caracter, simulando
+Al cargar la página, el texto de la profesión aparece escrito caracter por caracter, simulando
 una maquina de escribir. El efecto se ejecuta una sola vez y el texto queda fijo al terminar.
-Un cursor parpadeante acompaña el texto durante y despues de la animacion.
+Un cursor parpadeante acompaña el texto durante y después de la animación.
 
 ![Efecto en proceso](img/img%20Pamela/Hero_efecto_JS.jpg)
 ![Efecto finalizado](img/img%20Pamela/Hero_fin_efecto_js.jpg)
 
 **pEstrellasFugaces()**  
-Al cargar la pagina, se genera un efecto continuo de estrellas fugaces sobre el fondo del hero,
+Al cargar la página, se genera un efecto continuo de estrellas fugaces sobre el fondo del hero,
 dibujadas en un canvas con trayectoria diagonal y desvanecimiento progresivo.
 
 **pEnviarFormulario()**  
-Al completar y enviar el formulario de contacto, se muestra un mensaje de confirmacion
-sin recargar la pagina. El formulario se limpia automaticamente al enviarse.
+Al completar y enviar el formulario de contacto, se muestra un mensaje de confirmación
+sin recargar la página. El formulario se limpia automáticamente al enviarse.
 
 ![Formulario de contacto](img/img%20Pamela/formulario_de_contactos.jpg)
 
-### Paginas individuales
+### Páginas individuales
 
 Las paginas de Gisela, Fernanda y Andrea estan en desarrollo.
 
-## Diseño Responsive
+## Diseño responsive
 
 El sitio implementa los tres breakpoints obligatorios:
 
-- **400px** — moviles pequeños: todo en una columna, navegacion en columna
-- **900px** — tablets: grilla de integrantes en 2 columnas, tecnologias en 3 columnas
+- **400px** — móviles pequeños: todo en una columna, navegación en columna
+- **900px** — tablets: grilla de integrantes en 2 columnas, tecnologías en 3 columnas
 - **1200px** — escritorio grande: mayor padding y espaciado
 
-## Uso de Inteligencia Artificial
+## Uso de inteligencia artificial
 
 ### Herramienta utilizada
 
 - **Claude Sonnet 4.6 (Anthropic)** — asistente principal durante el desarrollo.
 
-### En que ayudo
+### En qué ayudó
 
-- Correccion de la estructura base de los archivos HTML
-- Correccion del CSS compartido (grid y animaciones)
-- Correccion y ajuste de las funciones JavaScript
-- Resolucion de dudas tecnicas sobre CSS y maquetado
+- Corrección de la estructura base de los archivos HTML
+- Corrección del CSS compartido (grid y animaciones)
+- Corrección y ajuste de las funciones JavaScript
+- Resolución de dudas técnicas sobre CSS y maquetado
 
-Todo el codigo fue revisado, corregido y personalizado por las integrantes del grupo.
+Todo el código fue revisado, corregido y personalizado por los integrantes del grupo.
 
-## Enlace al Proyecto
+## Enlace al proyecto
 
 [Agregar link de Vercel una vez publicado]

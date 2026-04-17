@@ -1,20 +1,21 @@
-
 /* Variables */
 :root {
-  --fondo:        #111111;
-  --fondo-medio:  #1a1a1a;
-  --fondo-tarjeta:#222222;
-  --acento:       #c8a96e;
+  --fondo: #111111;
+  --fondo-medio: #1a1a1a;
+  --fondo-tarjeta: #222222;
+  --acento: #c8a96e;
   --acento-claro: #e0c99a;
-  --dorado:       #ffffff;
-  --texto:        #f0f0f0;
-  --texto-suave:  #999999;
-  --borde:        rgba(200, 169, 110, 0.25);
-  --sombra:       0 8px 32px rgba(0, 0, 0, 0.6);
+  --dorado: #ffffff;
+  --texto: #f0f0f0;
+  --texto-suave: #999999;
+  --borde: rgba(200, 169, 110, 0.25);
+  --sombra: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: var(--fondo);
   color: var(--texto);
   line-height: 1.7;
@@ -52,7 +53,7 @@ body {
 }
 
 .logo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--dorado);
@@ -66,7 +67,7 @@ body {
 }
 
 .nav-link {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--texto-suave);
@@ -90,7 +91,11 @@ body {
   text-align: center;
   padding: 6rem 2rem 5rem;
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(200, 169, 110, 0.1) 0%, transparent 65%),
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(200, 169, 110, 0.1) 0%,
+      transparent 65%
+    ),
     var(--fondo);
   border-bottom: 1px solid var(--borde);
 }
@@ -100,7 +105,7 @@ body {
 }
 
 .hero-subtitulo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.3em;
@@ -111,7 +116,7 @@ body {
 }
 
 .hero-titulo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 900;
   color: var(--texto);
@@ -123,14 +128,14 @@ body {
 .hero-descripcion {
   font-size: 1.05rem;
   color: var(--texto-suave);
-  max-width: 550px;
+  max-width: 800px;
   margin: 0 auto 2.5rem;
   animation: fadeDown 0.8s ease 0.4s both;
 }
 
 /* Boton saludo */
 .btn-saludo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -140,7 +145,9 @@ body {
   border: none;
   padding: 0.9rem 2.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   animation: fadeDown 0.8s ease 0.6s both;
 }
 
@@ -154,7 +161,7 @@ body {
   font-size: 1rem;
   color: var(--dorado);
   font-style: italic;
-  min-height: 1.5rem; 
+  min-height: 1.5rem;
   animation: fadeDown 0.8s ease 0.7s both;
 }
 
@@ -166,7 +173,7 @@ body {
 }
 
 .seccion-titulo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: 700;
   color: var(--texto);
@@ -191,8 +198,20 @@ body {
 
 .grilla-integrantes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
+}
+
+.grilla-integrantes .tarjeta-integrante:nth-child(-n+3) {
+  grid-column: span 2;
+}
+
+.grilla-integrantes .tarjeta-integrante:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.grilla-integrantes .tarjeta-integrante:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .tarjeta-integrante {
@@ -200,7 +219,9 @@ body {
   border: 1px solid var(--borde);
   padding: 2rem 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .tarjeta-integrante:hover {
@@ -230,7 +251,7 @@ body {
 }
 
 .tarjeta-nombre {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--texto);
@@ -245,7 +266,7 @@ body {
 
 .btn-ver-portfolio {
   display: inline-block;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -254,7 +275,9 @@ body {
   text-decoration: none;
   border: 1px solid var(--acento);
   padding: 0.5rem 1.2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .btn-ver-portfolio:hover {
@@ -275,7 +298,10 @@ body {
   border: 1px solid var(--borde);
   padding: 1.5rem 1rem;
   text-align: center;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
 }
 
 .tech-item:hover {
@@ -286,7 +312,7 @@ body {
 
 .tech-nombre {
   display: block;
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--dorado);
@@ -312,7 +338,7 @@ body {
 }
 
 .footer-grupo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1rem;
   color: var(--dorado);
   margin-bottom: 0.3rem;
@@ -348,7 +374,11 @@ body {
   padding: 5rem 2rem 3rem;
   text-align: center;
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(200, 169, 110, 0.08) 0%, transparent 60%),
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(200, 169, 110, 0.08) 0%,
+      transparent 60%
+    ),
     var(--fondo);
   border-bottom: 1px solid var(--borde);
 }
@@ -364,7 +394,7 @@ body {
 }
 
 .pagina-nombre {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 900;
   color: var(--texto);
@@ -381,7 +411,7 @@ body {
 
 .btn-volver {
   display: inline-block;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -390,7 +420,9 @@ body {
   text-decoration: none;
   border: 1px solid var(--borde);
   padding: 0.5rem 1.2rem;
-  transition: border-color 0.3s ease, color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .btn-volver:hover {
@@ -434,7 +466,7 @@ body {
 }
 
 .bloque-titulo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--acento-claro);
@@ -459,7 +491,9 @@ body {
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
   color: var(--texto-suave);
-  transition: border-color 0.3s ease, color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .lista-habilidades li:hover {
@@ -486,7 +520,7 @@ body {
 }
 
 .item-numero {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 0.7rem;
   color: var(--dorado);
   margin-bottom: 0.4rem;
@@ -506,7 +540,9 @@ body {
   border-left: 3px solid var(--acento);
   padding: 1.8rem 2rem;
   margin-bottom: 1.2rem;
-  transition: border-left-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-left-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .bitacora-entrada:hover {
@@ -523,7 +559,7 @@ body {
 }
 
 .bitacora-subtitulo {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1.15rem;
   color: var(--texto);
   margin-bottom: 0.75rem;
@@ -554,6 +590,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .grilla-integrantes .tarjeta-integrante:nth-child(n) {
+    grid-column: span 1;
+  }
+
   .tech-grilla {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -569,10 +609,14 @@ body {
   }
 }
 
-/* Responsive 400px */
-@media (max-width: 400px) {
+/* Responsive 600px */
+@media (max-width: 600px) {
   .grilla-integrantes {
     grid-template-columns: 1fr;
+  }
+
+  .grilla-integrantes .tarjeta-integrante:nth-child(n) {
+    grid-column: span 1;
   }
 
   .tech-grilla {

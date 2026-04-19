@@ -1,13 +1,6 @@
 /* =====================================================
-   ARCHIVO CSS - PORTAFOLIO PERSONAL
+   ARCHIVO CSS - PORTAFOLIO ANDREA
    ===================================================== */
-
-/* Reset y estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Variables CSS para personalización centralizada */
 :root {
@@ -20,10 +13,6 @@
     --fuente-principal: 'Roboto', sans-serif;
     --fuente-titulo: 'Poppins', sans-serif;
     --transicion: 0.3s ease;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {

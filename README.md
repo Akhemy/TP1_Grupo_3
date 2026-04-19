@@ -39,15 +39,18 @@ TP1_Grupo_3/
 ├── gisela.html       <- Pagina individual de Gisela Croci (en desarrollo)
 ├── fernanda.html     <- Pagina individual de Fernanda Flores (en desarrollo)
 ├── pamela.html       <- Pagina individual de Pamela Olave
-├── andrea.html       <- Pagina individual de Andrea Maccan (en desarrollo)
+├── andrea.html       <- Pagina individual de Andrea Maccan
 ├── bitacora.html     <- Bitacora del proyecto
 ├── css/
 │   ├── styles.css    <- Estilos principales compartidos
-│   └── pamela.css    <- Estilos de la pagina de Pamela
+│   ├── pamela.css    <- Estilos de la pagina de Pamela
+│   └── andrea.css    <- Estilos de la pagina de Andrea
 ├── js/
-│   └── main.js       <- JavaScript de a portada
+│   ├── main.js       <- JavaScript de la portada
+│   └── andrea.js     <- JavaScript de la pagina de Andrea
 ├── img/
 │   └── img Pamela/   <- Imagenes de la pagina de Pamela
+│   └── imgs-andrea/  <- Imagenes de la pagina de Andrea
 └── README.md
 ```
 
@@ -75,6 +78,7 @@ TP1_Grupo_3/
 No se utilizan librerías de íconos. Respecto a las imágenes:
 
 - **Pamela Olave:** avatar generado a partir de una foto personal real.
+- **Andrea Maccan:** caricatura generada a partir de la edición de una imagen, sólo con fines académicos.
 - **Resto de integrantes:** imagenes obtenidas de internet, utilizadas con fines academicos.
 
 ## JavaScript — Funciones implementadas
@@ -109,9 +113,16 @@ sin recargar la página. El formulario se limpia automáticamente al enviarse.
 
 ![Formulario de contacto](img/img%20Pamela/formulario_de_contactos.jpg)
 
+### Página de Andrea (andrea.html)
+**cargarGatito()**  
+Función que carga una imagen aleatoria de un gato desde la API externa (cataas.com) cuando se envía el formulario de contacto. Muestra un popup con la imagen del gatito.
+
+**cerrarPopup()**  
+Función que cierra el popup del gatito. Se ejecuta al hacer click en el botón "Cerrar" o al hacer click fuera del contenido del popup.
+
 ### Páginas individuales
 
-Las paginas de Gisela, Fernanda y Andrea estan en desarrollo.
+Las paginas de Gisela y Fernanda estan en desarrollo.
 
 ## Diseño responsive
 
@@ -125,7 +136,7 @@ El sitio implementa los tres breakpoints obligatorios:
 
 ### Herramienta utilizada
 
-- **Claude Sonnet 4.6 (Anthropic)** — asistente principal durante el desarrollo.
+- **Claude Sonnet 4.6 y Haiku 4.5 (Anthropic)** — asistentes principales durante el desarrollo.
 
 ### En qué ayudó
 

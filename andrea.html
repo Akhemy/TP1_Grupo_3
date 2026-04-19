@@ -1,40 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrea Maccan — Grupo 3</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea Maccan — Grupo 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/andrea.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">Grupo 3</div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="bitacora.html" class="nav-link">Bitácora</a>
+        </nav>
+      </div>
+    </header>
 
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo">Grupo 3</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="bitacora.html" class="nav-link">Bitácora</a>
-      </nav>
+    <header class="andrea">
+      <div class="container">
+        <h1>Andrea Maccan</h1>
+        <p class="subtitulo">Desarrolladora FullStack</p>
+      </div>
+    </header>
+
+    <nav class="andrea">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#tarjetas">Habilidades blandas</a></li>
+        <li><a href="#habilidades">Habilidades técnicas</a></li>
+        <li><a href="#películas">Películas Favoritas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+      <main>
+      <section id="sobre-mi" class="seccion">
+        <div class="container">
+          <h2>Sobre mí</h2>
+          <div class="contenido-sobre-mi">
+            <img
+              src="img/imgs-andrea/about-me.jpg"
+              alt="Foto de perfil personal"
+            />
+            <p>
+              Desarrolladora fullstack con algunos años de experiencia en el
+              sector educativo.<br />
+              Me interesa escribir código claro y legible, que sea fácil de
+              mantener, escalar y transmitir.<br />
+              Me parece fundamental para trabajar en equipo y de manera
+              colaborativa.<br />
+              Sigo creciendo en este ámbito. Mi misión es crear soluciones
+              tecnológicas que transformen la educación, creo que la tecnología
+              tiene mucho para aportar a la educación.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tarjetas" class="seccion">
+        <div class="container">
+          <h2>Habilidades Blandas</h2>
+          <div class="tarjetas">
+            <div class="tarjeta">
+              <img
+                src="img/imgs-andrea/card-01.jpg"
+                alt="Trabajo colaborativo"
+              />
+              <h3>Trabajo Colaborativo</h3>
+              <p>
+                Experiencia en trabajo en equipo, adaptándome a diferentes
+                dinámicas grupales y aportando valor en proyectos
+                multidisciplinarios.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <img
+                src="img/imgs-andrea/card-02.jpg"
+                alt="Comunicación efectiva"
+              />
+              <h3>Comunicación Efectiva</h3>
+              <p>
+                Habilidad para transmitir ideas de manera clara y concisa,
+                adaptando el mensaje según la audiencia y facilitando la
+                comprensión mutua.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <img
+                src="img/imgs-andrea/card-03.jpg"
+                alt="Resolución de problemas"
+              />
+              <h3>Resolución de Problemas</h3>
+              <p>
+                Capacidad analítica para identificar desafíos, evaluar
+                alternativas y proponer soluciones innovadoras y efectivas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="seccion">
+        <div class="container">
+          <h2>Habilidades Técnicas</h2>
+          <div class="habilidades-grid">
+            <div class="grupo-habilidades">
+              <h3>Tecnologías que domino</h3>
+              <ul>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>NestJS</li>
+                <li>SQL / NoSQL</li>
+                <li>GraphQL</li>
+              </ul>
+            </div>
+            <div class="grupo-habilidades">
+              <h3>Tecnologías a aprender</h3>
+              <ul>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Terraform</li>
+                <li>AWS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="películas" class="seccion">
+        <div class="container">
+          <h2>Películas Favoritas</h2>
+          <div class="peliculas-grid">
+            <div class="pelicula">
+              <img
+                src="img/imgs-andrea/tracks.jpg"
+                alt="Tracks - Película de aventura y supervivencia"
+              />
+              <h3>Tracks</h3>
+              <p>
+                Una historia sobre perseverancia y autodescubrimiento en el
+                desierto australiano. El viaje de la protagonista es un
+                testimonio de espíritu humano y conexión con la naturaleza.
+              </p>
+            </div>
+            <div class="pelicula">
+              <img
+                src="img/imgs-andrea/perfect-days.jpg"
+                alt="Perfect Days - Película contemplativa"
+              />
+              <h3>Perfect Days</h3>
+              <p>
+                Una obra de Wim Wenders que hace énfasis en la belleza de la
+                sencillez de la vida cotidiana. La cinematografía cautiva
+                acompañado de un mensaje profundamente humanista.
+              </p>
+            </div>
+            <div class="pelicula">
+              <img
+                src="img/imgs-andrea/lost-in-translation.jpg"
+                alt="Lost in Translation - Película de conexión y melancolía"
+              />
+              <h3>Lost in Translation</h3>
+              <p>
+                Una obra de Sofia Coppola que explora la soledad y la conexión humana en Tokio. Una película contemplativa que captura la incomunicación y los momentos de verdadera comprensión entre dos extraños.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="seccion">
+        <div class="container">
+          <h2>Contacto</h2>
+          <form class="formulario-contacto">
+            <div class="grupo-formulario">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="grupo-formulario">
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" required />
+            </div>
+            <div class="grupo-formulario">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="grupo-formulario">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" />
+            </div>
+            <button type="submit" class="boton-submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="popup-gatito" class="popup-gatito">
+      <div class="contenido-popup">
+        <h2>¡Ganaste un gatito!</h2>
+        <img id="imagen-gatito" src="" alt="Gatito aleatorio" />
+        <button class="boton-cerrar-popup" onclick="cerrarPopup()">
+          Cerrar
+        </button>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <h1>Andrea Maccan</h1>
-  </main>
+    <footer class="andrea">
+      <div class="container">
+        <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </footer>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
-      <p class="footer-materia">Desarrollo de Sistemas Web — Frontend — 2026</p>
-      <nav class="footer-nav">
-        <a href="index.html" class="footer-link">Inicio</a>
-        <a href="bitacora.html" class="footer-link">Bitácora</a>
-      </nav>
-    </div>
-  </footer>
+    <script src="js/andrea.js"></script>
 
-</body>
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
+        <p class="footer-materia">
+          Desarrollo de Sistemas Web — Frontend — 2026
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="bitacora.html" class="footer-link">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

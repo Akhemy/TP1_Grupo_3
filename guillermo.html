@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guillermo Benitez | Dev en Formación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="css/guillermo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <nav class="nav">
+    <span class="nav__logo">GB</span>
+
+    <!-- Links ancla a secciones -->
+    <ul class="nav__links">
+      <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+      <li><a href="#peliculas"   class="nav__link">Películas</a></li>
+      <li><a href="#musica"      class="nav__link">Música</a></li>
+      <li><a href="#contacto"    class="nav__link">Contacto</a></li>
+      <li><a href="#companeras" class="nav__link">Compañeras</a></li>
+    </ul>
+
+    <!-- Botones de navegación externa -->
+    <div class="nav__actions">
+      <a href="index.html"    class="nav__btn nav__btn--ghost">← Inicio</a>
+      <a href="bitacora.html" class="nav__btn nav__btn--accent">Bitácora</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ==================== -->
+  <header class="hero">
+    <div class="hero__bg-text" aria-hidden="true">GUILLERMO</div>
+
+    <div class="hero__content">
+      <div class="hero__avatar-wrap">
+        <div class="hero__avatar-flipper">
+          <div class="hero__avatar-front">
+            <img src="img/img-guillermo/guillermo.jpg" alt="Foto de Guillermo Benitez" />
+          </div>
+          <div class="hero__avatar-back">
+            <img src="img/img-guillermo/guillermo2.jpg" alt="Foto alternativa de Guillermo Benitez" />
+          </div>
+        </div>
+        <div class="hero__avatar-ring"></div>
+      </div>
+
+      <div class="hero__info">
+        <p class="hero__label">Desarrollador en formación</p>
+        <h1 class="hero__name">Guillermo<br /><span>Benitez</span></h1>
+        <div class="hero__meta">
+          <a href="https://maps.google.com/?q=Paraná,Entre+Ríos,Argentina" target="_blank" rel="noopener noreferrer" class="hero__chip hero__chip--link">
+            <span class="hero__chip-pin">📍</span> Paraná, Entre Ríos
+          </a>
+          <span class="hero__chip hero__chip--age" aria-label="Fecha de nacimiento: 21 de agosto de 1991">
+            34 años
+            <span class="hero__chip-tooltip">21 de agosto de 1991</span>
+          </span>
+        </div>
+
+        <button class="hero__btn js-toggle-bio" aria-expanded="false">
+          Sobre mí <span class="hero__btn-arrow">↓</span>
+        </button>
+        <p class="hero__bio js-bio" hidden>
+          Estudiante de la Tecnicatura Superior en Desarrollo de Software.
+          Me encanta la programación y el desarrollo web, así como temáticas
+          como el desarrollo orientado a ventas, la seguridad financiera y
+          la ciberseguridad en general. Soy un apasionado de los videojuegos
+          y también me gustaría formarme en esa área, aunque actualmente
+          estoy enfocado principalmente en el desarrollo de software.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ================ HABILIDADES ================ -->
+    <section class="section" id="habilidades">
+      <h2 class="section__title">Habilidades</h2>
+      <p class="section__subtitle">Hacé clic en una habilidad para saber más</p>
+      <div class="skills__grid">
+
+        <div class="skill-card js-skill" tabindex="0" role="button" aria-label="Habilidad HTML">
+          <div class="skill-card__front">
+            <i class="devicon-html5-plain colored skill-card__icon"></i>
+            <span class="skill-card__name">HTML</span>
+          </div>
+          <div class="skill-card__back">
+            <p>Realicé cursos de HTML y CSS. Conozco la estructura semántica de páginas web y sigo profundizando en el tema.</p>
+          </div>
+        </div>
+
+        <div class="skill-card js-skill" tabindex="0" role="button" aria-label="Habilidad JavaScript">
+          <div class="skill-card__front">
+            <i class="devicon-javascript-plain colored skill-card__icon"></i>
+            <span class="skill-card__name">JavaScript</span>
+          </div>
+          <div class="skill-card__back">
+            <p>Aprendí JavaScript a través de cursos en Udemy. Me interesa la interactividad y el desarrollo de funciones dinámicas.</p>
+          </div>
+        </div>
+
+        <div class="skill-card js-skill" tabindex="0" role="button" aria-label="Habilidad Java">
+          <div class="skill-card__front">
+            <i class="devicon-java-plain colored skill-card__icon"></i>
+            <span class="skill-card__name">Java</span>
+          </div>
+          <div class="skill-card__back">
+            <p>Comencé mi formación con Java, lenguaje que usamos en la carrera para entender la programación orientada a objetos.</p>
+          </div>
+        </div>
+
+        <div class="skill-card js-skill" tabindex="0" role="button" aria-label="Habilidad Aprendizaje continuo">
+          <div class="skill-card__front">
+            <i class="devicon-vscode-plain colored skill-card__icon"></i>
+            <span class="skill-card__name">Aprendizaje continuo</span>
+          </div>
+          <div class="skill-card__back">
+            <p>Actualmente aprendo tecnologías de Frontend y Backend con el objetivo de aprender a desarrollar software de calidad.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PELÍCULAS ================= -->
+    <section class="section" id="peliculas">
+      <h2 class="section__title">Películas favoritas</h2>
+      <p class="section__subtitle">Algunas de mis películas favoritas</p>
+      <div class="movies__grid">
+
+        <div class="movie-card">
+          <img src="img/img-guillermo/pelicula-luciernagas.jpg" alt="Póster de La tumba de las luciérnagas" class="movie-card__img" />
+          <div class="movie-card__overlay">
+            <h3>La tumba de las luciérnagas</h3>
+            <span class="movie-card__meta">Isao Takahata — Studio Ghibli, 1988</span>
+            <p class="movie-card__desc">Dos hermanos huérfanos luchan por sobrevivir en el Japón de la Segunda Guerra Mundial. Roger Ebert la consideró una de las mejores y más poderosas películas antibelicistas de todos los tiempos.</p>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img src="img/img-guillermo/pelicula-chihiro.jpg" alt="Póster de El viaje de Chihiro" class="movie-card__img" />
+          <div class="movie-card__overlay">
+            <h3>El viaje de Chihiro</h3>
+            <span class="movie-card__meta">Hayao Miyazaki — Studio Ghibli, 2001</span>
+            <p class="movie-card__desc">Una niña queda atrapada en un mundo sobrenatural poblado de espíritus y dioses. Ganadora del Oscar a Mejor Película Animada y considerada una obra cumbre del cine de animación mundial.</p>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img src="img/img-guillermo/pelicula-truman.jpg" alt="Póster de The Truman Show" class="movie-card__img" />
+          <div class="movie-card__overlay">
+            <h3>The Truman Show</h3>
+            <span class="movie-card__meta">Peter Weir — Paramount Pictures, 1998</span>
+            <p class="movie-card__desc">Un hombre descubre que toda su vida fue transmitida en vivo sin su conocimiento. Una reflexión vigente sobre la realidad, la libertad y la vigilancia mediática.</p>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img src="img/img-guillermo/pelicula-naranja.jpg" alt="Póster de La naranja mecánica" class="movie-card__img" />
+          <div class="movie-card__overlay">
+            <h3>La naranja mecánica</h3>
+            <span class="movie-card__meta">Stanley Kubrick — Warner Bros., 1971</span>
+            <p class="movie-card__desc">En una Inglaterra distópica, un joven violento es sometido a un tratamiento de modificación conductual. Un estudio brutal sobre el libre albedrío, el control social y la naturaleza humana.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================== MÚSICA ================== -->
+    <section class="section" id="musica">
+      <h2 class="section__title">Discos favoritos</h2>
+      <p class="section__subtitle">Girá las tapas para ver el tracklist</p>
+      <div class="music__grid">
+
+        <!-- Rammstein -->
+        <div class="album-card">
+          <p class="album-card__band">Rammstein</p>
+          <div class="album-card__flipper">
+            <div class="album-card__front">
+              <img src="img/img-guillermo/album-rammstein.jpg" alt="Portada del álbum Rammstein" />
+            </div>
+            <div class="album-card__back">
+              <h3 class="album-card__title">RAMMSTEIN</h3>
+              <p class="album-card__year">2019 · Metal industrial</p>
+              <ol class="album-card__tracks">
+                <li>Deutschland</li>
+                <li>Radio</li>
+                <li>Zeig dich</li>
+                <li>Ausländer</li>
+                <li>Sex</li>
+                <li>Puppe</li>
+              </ol>
+              <a href="https://open.spotify.com/album/3R7mUm3SZhV3BIIY7FMrU1" target="_blank" rel="noopener noreferrer" class="album-card__spotify">
+                <i class="fa-brands fa-spotify"></i> Escuchar en Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric -->
+        <div class="album-card">
+          <p class="album-card__band">Metric</p>
+          <div class="album-card__flipper">
+            <div class="album-card__front">
+              <img src="img/img-guillermo/album-metric.jpg" alt="Portada del álbum Fantasies de Metric" />
+            </div>
+            <div class="album-card__back">
+              <h3 class="album-card__title">Fantasies</h3>
+              <p class="album-card__year">2009 · Indie rock</p>
+              <ol class="album-card__tracks">
+                <li>Help I'm Alive</li>
+                <li>Sick Muse</li>
+                <li>Satellite Mind</li>
+                <li>Gimme Sympathy</li>
+                <li>Collect Call</li>
+                <li>Alive (acoustic)</li>
+              </ol>
+              <a href="https://open.spotify.com/album/1N2HeWMUjuAxYL7UnA63JH" target="_blank" rel="noopener noreferrer" class="album-card__spotify">
+                <i class="fa-brands fa-spotify"></i> Escuchar en Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redonditos -->
+        <div class="album-card">
+          <p class="album-card__band">Los Redonditos de Ricota</p>
+          <div class="album-card__flipper">
+            <div class="album-card__front">
+              <img src="img/img-guillermo/album-redondos.jpg" alt="Portada del álbum Oktubre" />
+            </div>
+            <div class="album-card__back">
+              <h3 class="album-card__title">Oktubre</h3>
+              <p class="album-card__year">1986 · Rock nacional</p>
+              <ol class="album-card__tracks">
+                <li>Jijiji</li>
+                <li>Merca Rusa</li>
+                <li>Superlógico</li>
+                <li>Fusilados por el ejército</li>
+                <li>La bestia pop</li>
+                <li>Vencedores vencidos</li>
+              </ol>
+              <a href="https://open.spotify.com/album/1N2HeWMUjuAxYL7UnA63JH" target="_blank" rel="noopener noreferrer" class="album-card__spotify">
+                <i class="fa-brands fa-spotify"></i> Escuchar en Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gorillaz -->
+        <div class="album-card">
+          <p class="album-card__band">Gorillaz</p>
+          <div class="album-card__flipper">
+            <div class="album-card__front">
+              <img src="img/img-guillermo/album-gorillaz.jpg" alt="Portada del álbum Demon Days" />
+            </div>
+            <div class="album-card__back">
+              <h3 class="album-card__title">Demon Days</h3>
+              <p class="album-card__year">2005 · Alternative / Hip-hop</p>
+              <ol class="album-card__tracks">
+                <li>Feel Good Inc.</li>
+                <li>DARE</li>
+                <li>Dirty Harry</li>
+                <li>Kids With Guns</li>
+                <li>El Mañana</li>
+                <li>November Has Come</li>
+              </ol>
+              <a href="https://open.spotify.com/album/0bUTHlWbkSQysoM3VsWldT" target="_blank" rel="noopener noreferrer" class="album-card__spotify">
+                <i class="fa-brands fa-spotify"></i> Escuchar en Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================== CONTACTO ================= -->
+    <section class="section" id="contacto">
+      <h2 class="section__title">Contacto</h2>
+      <p class="section__subtitle">¿Tenés algo para decirme? Dejá tu mensaje y te respondo.</p>
+
+      <form class="contact__form" onsubmit="enviarFormulario(event)" novalidate>
+
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="contact__field">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required />
+          </div>
+        </div>
+
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="contact__field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 343 000-0000" />
+          </div>
+        </div>
+
+        <div class="contact__field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+        </div>
+
+        <button type="submit" class="contact__btn">Enviar mensaje</button>
+
+        <p id="contact-success" class="contact__success" hidden>
+          ✓ Mensaje enviado. ¡Te respondo pronto!
+        </p>
+
+      </form>
+    </section>
+
+    <!-- ================ COMPAÑERAS ================ -->
+    <section class="section" id="companeras">
+      <h2 class="section__title">Conocé a mis compañeras</h2>
+      <p class="section__subtitle">Mis compañeras de proyecto</p>
+      <div class="team__grid">
+
+        <a href="andrea.html" class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="img/andrea.jpg" alt="Foto de Andrea" />
+          </div>
+          <div class="team-card__info">
+            <h3>Andrea</h3>
+            <span>Ver perfil →</span>
+          </div>
+        </a>
+
+        <a href="fernanda.html" class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="img/fernanda.jpg" alt="Foto de Fernanda" />
+          </div>
+          <div class="team-card__info">
+            <h3>Fernanda</h3>
+            <span>Ver perfil →</span>
+          </div>
+        </a>
+
+        <a href="pamela.html" class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="img/img Pamela/pamela.jpg" alt="Foto de Pamela" />
+          </div>
+          <div class="team-card__info">
+            <h3>Pamela</h3>
+            <span>Ver perfil →</span>
+          </div>
+        </a>
+
+        <a href="gisela.html" class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="img/gisela.jpg" alt="Foto de Gisela" />
+          </div>
+          <div class="team-card__info">
+            <h3>Gisela</h3>
+            <span>Ver perfil →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="https://www.linkedin.com/in/guillehbenitez" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+        <i class="devicon-linkedin-plain"></i>
+      </a>
+      <a href="https://github.com/guillermohbenitez" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
+        <i class="devicon-github-original"></i>
+      </a>
+      <a href="https://www.instagram.com/guillehbenitez/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <a href="index.html" class="footer__btn">← Volver al equipo</a>
+    <p class="footer__copy">© 2026 Guillermo Benitez — Tecnicatura Superior en Desarrollo de Software</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/guillermo.js"></script>
+</body>
+</html>

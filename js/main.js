@@ -14,7 +14,7 @@ function mostrarSaludo() {
   // Lista de mensajes posibles
   var mensajes = [
     "Bienvenido/a a nuestro espacio colaborativo.",
-    "Cuatro mentes, un solo proyecto.",
+    "Cinco mentes, un solo proyecto.",
     "Aprendemos juntas, construimos juntas.",
 "El codigo es mejor en equipo."
   ];

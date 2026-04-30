@@ -1,0 +1,1013 @@
+/* =============================================
+   guillermo.css — Tarjeta de Guillermo Benitez
+   Tecnicatura Superior en Desarrollo de Software
+   ============================================= */
+
+/* ---- Variables / Tokens ---- */
+:root {
+  --bg:          #070710;
+  --surface:     #0f0f1a;
+  --surface-2:   #161628;
+  --border:      #252540;
+  --accent:      #f5a623;
+  --accent-dim:  #c47d0e;
+  --text:        #dde1ff;
+  --text-muted:  #6b6b8a;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --radius:       12px;
+  --transition:   0.3s ease;
+}
+
+/* ---- Reset básico ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img   { display: block; max-width: 100%; }
+
+/* =============================================
+   BARRA DE PROGRESO DE SCROLL
+   ============================================= */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), #ffc04d);
+  z-index: 200;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+a     { color: inherit; text-decoration: none; }
+
+/* =============================================
+   NAV
+   ============================================= */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(7, 7, 16, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 100;
+}
+
+/* Logo */
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Links de secciones */
+.nav__links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  transition: color var(--transition), background var(--transition);
+}
+.nav__link:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+/* Botones de navegación externa */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.nav__btn {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition),
+              box-shadow var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.nav__btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Ghost: borde sutil, sin relleno */
+.nav__btn--ghost {
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.nav__btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+/* Accent: relleno con color principal */
+.nav__btn--accent {
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+.nav__btn--accent:hover {
+  background: #ffc04d;
+  box-shadow: 0 0 14px rgba(245, 166, 35, 0.4);
+}
+
+/* Responsive: ocultar links en mobile, mantener botones */
+@media (max-width: 700px) {
+  .nav__links { display: none; }
+  .nav__btn   { font-size: 0.72rem; padding: 0.35rem 0.75rem; }
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero__bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 20vw, 14rem);
+  color: rgba(245, 166, 35, 0.04);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero__avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  /* perspectiva para el efecto 3D */
+  perspective: 900px;
+}
+
+/* Contenedor del flip */
+.hero__avatar-flipper {
+  width: 180px;
+  height: 270px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50% / 40%;
+  cursor: pointer;
+  z-index: 1;
+}
+.hero__avatar-wrap:hover .hero__avatar-flipper {
+  transform: rotateY(180deg);
+}
+
+/* Cara frontal y trasera — propiedades compartidas */
+.hero__avatar-front,
+.hero__avatar-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 50% / 40%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 3px solid var(--accent);
+}
+.hero__avatar-front img,
+.hero__avatar-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* La cara trasera empieza girada */
+.hero__avatar-back {
+  transform: rotateY(180deg);
+}
+
+/* Anillo pulsante — ahora ovalado también */
+.hero__avatar-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50% / 40%;
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  animation: pulse-ring 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1);    opacity: 0.4; }
+  50%       { transform: scale(1.06); opacity: 1;   }
+}
+
+.hero__info { text-align: center; }
+
+.hero__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+.hero__name span { color: var(--accent); }
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.hero__chip {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Chip de ubicación — link sutil */
+.hero__chip--link {
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+.hero__chip--link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.hero__chip-pin {
+  font-size: 0.8rem;
+}
+
+/* Chip de edad — tooltip en hover */
+.hero__chip--age {
+  position: relative;
+  cursor: default;
+}
+.hero__chip-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-2);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(-50%) translateY(4px);
+}
+/* Flechita del tooltip */
+.hero__chip-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--accent);
+}
+.hero__chip--age:hover .hero__chip-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hero__btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.hero__btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+.hero__btn-arrow {
+  display: inline-block;
+  transition: transform var(--transition);
+}
+.hero__btn[aria-expanded="true"] .hero__btn-arrow {
+  transform: rotate(180deg);
+}
+
+.hero__bio {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin-inline: auto;
+  line-height: 1.75;
+  /* Transición fluida: max-height + opacity */
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+/* Clase activa aplicada por JS */
+.hero__bio.is-open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* =============================================
+   SECCIONES GENERALES
+   ============================================= */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.section { margin-bottom: 5rem; }
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+.section__title::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+.section__subtitle {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* =============================================
+   HABILIDADES (skill cards)
+   ============================================= */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 150px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.skill-card:hover,
+.skill-card:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.skill-card__front {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+/* Ícono de Devicon */
+.skill-card__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.skill-card__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.skill-card__back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  line-height: 1.65;
+  border-radius: var(--radius);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.skill-card.is-active { border-color: var(--accent); }
+.skill-card.is-active .skill-card__front {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+.skill-card.is-active .skill-card__back {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   PELÍCULAS (hover overlay)
+   ============================================= */
+.movies__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.movie-card {
+  /* Proporción póster de cine: 2:3 */
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid var(--border);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.movie-card:hover {
+  border-color: var(--accent);
+  transform: scale(1.03);
+}
+
+/* Imagen del póster — ocupa toda la tarjeta */
+.movie-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.movie-card:hover .movie-card__img {
+  transform: scale(1.05);
+}
+
+/* Overlay: gradiente inferior en reposo, fondo completo en hover */
+.movie-card__overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  background: linear-gradient(to top, rgba(7,7,16,0.95) 30%, transparent 60%);
+  transition: background 0.4s ease;
+}
+.movie-card:hover .movie-card__overlay {
+  background: rgba(7, 7, 16, 0.88);
+  justify-content: center;
+}
+
+.movie-card__overlay h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+.movie-card__meta {
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+/* Descripción: oculta en reposo, aparece en hover */
+.movie-card__desc {
+  font-size: 0.85rem;
+  color: rgba(221, 225, 255, 0.85);
+  line-height: 1.7;
+  margin-top: 0.4rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.35s ease 0.1s, max-height 0.4s ease;
+}
+.movie-card:hover .movie-card__desc {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* =============================================
+   MÚSICA (flip cards)
+   ============================================= */
+.music__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Contenedor de cada álbum */
+.album-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Nombre de la banda — título encima */
+.album-card__band {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-transform: uppercase;
+  padding-left: 0.1rem;
+}
+
+/* Contenedor del flip */
+.album-card__flipper {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.album-card:hover .album-card__flipper {
+  transform: rotateY(180deg);
+}
+
+/* Cara frontal y trasera — compartido */
+.album-card__front,
+.album-card__back {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Cara frontal: portada del disco */
+.album-card__front {
+  border: 1px solid var(--border);
+  transition: border-color var(--transition);
+}
+.album-card:hover .album-card__front {
+  border-color: var(--accent);
+}
+.album-card__front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s ease;
+}
+.album-card:hover .album-card__front img {
+  transform: scale(1.04);
+}
+
+/* Cara trasera: tracklist */
+.album-card__back {
+  transform: rotateY(180deg);
+  background: var(--surface-2);
+  border: 1px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.album-card__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  line-height: 1;
+}
+.album-card__year {
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* Tracklist numerado */
+.album-card__tracks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  counter-reset: track;
+}
+.album-card__tracks li {
+  counter-increment: track;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3;
+}
+.album-card__tracks li::before {
+  content: counter(track, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--accent);
+  opacity: 0.6;
+  flex-shrink: 0;
+  width: 1.4rem;
+}
+
+/* Botón Spotify */
+.album-card__spotify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  background: #1DB954;
+  color: #000;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.album-card__spotify i {
+  font-size: 1rem;
+}
+.album-card__spotify:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+/* =============================================
+   COMPAÑERAS
+   ============================================= */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.team-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* Imagen */
+.team-card__img-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.team-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.team-card:hover .team-card__img-wrap img {
+  transform: scale(1.05);
+}
+
+
+/* Info debajo de la imagen */
+.team-card__info {
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team-card__info h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+.team-card__info span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.team-card:hover .team-card__info span {
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .team__grid { grid-template-columns: repeat(2, 200px); justify-content: center; }
+}
+@media (max-width: 400px) {
+  .team__grid { grid-template-columns: repeat(2, 170px); justify-content: center; }
+}
+
+/* =============================================
+   CONTACTO
+   ============================================= */
+#contacto .section__title,
+#contacto .section__subtitle {
+  text-align: center;
+}
+#contacto .section__title::after {
+  margin-inline: auto;
+}
+
+.contact__form {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Fila de dos campos */
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Grupo label + input */
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact__field label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.contact__field input,
+.contact__field textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  resize: none;
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Foco: borde acento + glow sutil */
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
+}
+
+/* Botón enviar */
+.contact__btn {
+  align-self: flex-start;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.contact__btn:hover {
+  background: #ffc04d;
+  box-shadow: 0 0 18px rgba(245, 166, 35, 0.55);
+  transform: translateY(-2px);
+}
+.contact__btn:active {
+  transform: translateY(0);
+}
+
+/* Mensaje de éxito */
+.contact__success {
+  font-size: 0.88rem;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  animation: fadeDown 0.4s ease;
+}
+
+/* Responsive: 1 columna en mobile */
+@media (max-width: 600px) {
+  .contact__row {
+    grid-template-columns: 1fr;
+  }
+  .contact__btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Redes sociales */
+.footer__socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.footer__social-link {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  transition: border-color var(--transition), color var(--transition),
+              transform var(--transition), box-shadow var(--transition);
+}
+.footer__social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.2);
+}
+
+.footer__btn {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: background var(--transition), color var(--transition);
+}
+.footer__btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.footer__copy {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* =============================================
+   RESPONSIVE — breakpoints obligatorios
+   ============================================= */
+
+/* 400px — Móviles pequeños */
+@media (max-width: 400px) {
+  .skills__grid  { grid-template-columns: 1fr; }
+  .movies__grid  { grid-template-columns: 1fr; }
+  .music__grid   { grid-template-columns: 1fr; }
+  /* movie-card usa aspect-ratio, sin altura fija */
+
+  .hero__name    { font-size: 2.8rem; }
+  .hero__avatar-flipper { width: 140px; height: 210px; }
+
+  .album {
+    flex-direction: column;
+    text-align: center;
+  }
+  .album__cover  { width: 80px; height: 80px; }
+}
+
+/* 900px — Tablets y pantallas medianas */
+@media (min-width: 900px) {
+  .hero__content {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+  }
+  .hero__info    { text-align: left; }
+  .hero__meta    { justify-content: flex-start; }
+  .hero__bio     { margin-inline: 0; }
+  .hero__avatar-flipper { width: 200px; height: 300px; }
+
+  .skills__grid  { grid-template-columns: repeat(4, 1fr); }
+  .movies__grid  { grid-template-columns: repeat(4, 1fr); }
+  /* movie-card usa aspect-ratio, sin altura fija */
+}
+
+/* 1200px — Escritorio grande */
+@media (min-width: 1200px) {
+  .hero { padding: 5rem 2rem 6rem; }
+  .hero__avatar-flipper { width: 220px; height: 330px; }
+
+  /* music__grid ya usa 2 columnas por defecto */
+}

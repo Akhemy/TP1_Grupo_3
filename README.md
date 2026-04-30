@@ -20,7 +20,7 @@ El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin framewo
 | Fernanda Flores | [ferffloress](https://github.com/ferffloress) |
 | Pamela Olave    | [Akhemy](https://github.com/Akhemy)           |
 | Andrea Maccan   | [acmaccan](https://github.com/acmaccan)       |
-| Guillermo       | [xxxxxxx](https://github.com/completar!!)     |
+| Guillermo       | [guillermohbenitez](https://github.com/guillermohbenitez)|
 
 ## Tecnologías utilizadas
 

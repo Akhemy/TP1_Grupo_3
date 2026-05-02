@@ -14,13 +14,13 @@ El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin framewo
 
 ## Integrantes
 
-| Nombre          | GitHub                                        |
-| --------------- | --------------------------------------------- |
-| Gisela Croci    | [giselac89](https://github.com/giselac89)     |
-| Fernanda Flores | [ferffloress](https://github.com/ferffloress) |
-| Pamela Olave    | [Akhemy](https://github.com/Akhemy)           |
-| Andrea Maccan   | [acmaccan](https://github.com/acmaccan)       |
-| Guillermo       | [guillermohbenitez](https://github.com/guillermohbenitez)|
+| Nombre          | GitHub                                                    |
+| --------------- | --------------------------------------------------------- |
+| Gisela Croci    | [giselac89](https://github.com/giselac89)                 |
+| Fernanda Flores | [ferffloress](https://github.com/ferffloress)             |
+| Pamela Olave    | [Akhemy](https://github.com/Akhemy)                       |
+| Andrea Maccan   | [acmaccan](https://github.com/acmaccan)                   |
+| Guillermo       | [guillermohbenitez](https://github.com/guillermohbenitez) |
 
 ## Tecnologías utilizadas
 
@@ -114,11 +114,23 @@ sin recargar la página. El formulario se limpia automáticamente al enviarse.
 ![Formulario de contacto](img/img%20Pamela/formulario_de_contactos.jpg)
 
 ### Página de Andrea (andrea.html)
+
 **cargarGatito()**  
 Función que carga una imagen aleatoria de un gato desde la API externa (cataas.com) cuando se envía el formulario de contacto. Muestra un popup con la imagen del gatito.
 
 **cerrarPopup()**  
 Función que cierra el popup del gatito. Se ejecuta al hacer click en el botón "Cerrar" o al hacer click fuera del contenido del popup.
+
+### Página de Fernanda (fernanda.html)
+
+**Navegación activa por scroll**
+Al hacer scroll por la página, se detecta automáticamente qué sección está visible
+en pantalla y se marca el enlace correspondiente en la barra de navegación con la clase `active`.
+
+**Portadas dinámicas de discos**
+Al cargar la página, se consulta la API pública de iTunes para cada álbum listado
+en la sección de música. Si encuentra resultados, reemplaza el placeholder con letra
+por la portada real del disco en alta resolución. Si la petición falla, conserva el diseño de fallback.
 
 ### Páginas individuales
 

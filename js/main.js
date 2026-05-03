@@ -15,8 +15,8 @@ function mostrarSaludo() {
   var mensajes = [
     "Bienvenido/a a nuestro espacio colaborativo.",
     "Cinco mentes, un solo proyecto.",
-    "Aprendemos juntas, construimos juntas.",
-"El codigo es mejor en equipo."
+    "Aprendemos juntos, construimos juntos.",
+    "El codigo es mejor en equipo."
   ];
 
   // Elige un mensaje al azar

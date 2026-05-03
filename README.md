@@ -14,13 +14,13 @@ El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin framewo
 
 ## Integrantes
 
-| Nombre          | GitHub                                        |
-| --------------- | --------------------------------------------- |
-| Gisela Croci    | [giselac89](https://github.com/giselac89)     |
-| Fernanda Flores | [ferffloress](https://github.com/ferffloress) |
-| Pamela Olave    | [Akhemy](https://github.com/Akhemy)           |
-| Andrea Maccan   | [acmaccan](https://github.com/acmaccan)       |
-| Guillermo       | [guillermohbenitez](https://github.com/guillermohbenitez)|
+| Nombre          | GitHub                                                    |
+| --------------- | --------------------------------------------------------- |
+| Gisela Croci    | [giselac89](https://github.com/giselac89)                 |
+| Fernanda Flores | [ferffloress](https://github.com/ferffloress)             |
+| Pamela Olave    | [Akhemy](https://github.com/Akhemy)                       |
+| Andrea Maccan   | [acmaccan](https://github.com/acmaccan)                   |
+| Guillermo       | [guillermohbenitez](https://github.com/guillermohbenitez) |
 
 ## Tecnologías utilizadas
 
@@ -124,6 +124,7 @@ sin recargar la página. El formulario se limpia automáticamente al enviarse.
 ![Formulario de contacto](img/img%20Pamela/formulario_de_contactos.jpg)
 
 ### Página de Andrea (andrea.html)
+
 **cargarGatito()**  
 Función que carga una imagen aleatoria de un gato desde la API externa (cataas.com) cuando se envía el formulario de contacto. Muestra un popup con la imagen del gatito.
 

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaByte | Portafolio Personal</title>
+  <title>Gisela Croci | Portafolio Personal</title>
 
-  <!-- Google Fonts: "DM Sans" -->
+  <!-- Google Fonts: DM Sans para cuerpo y DM Serif Display para títulos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -14,11 +14,14 @@
 </head>
 <body>
 
-
+  <!-- =========================================================
+       HEADER: logo y navegación principal.
+       Idea futura: agregar menú hamburguesa para mobile.
+  ========================================================= -->
   <header>
     <div class="header-inner">
-      <span class="logo">Nova<span class="logo-accent">Byte</span></span>
-     
+      <span class="logo">Gisela<span class="logo-accent">Croci</span></span>
+
       <nav>
         <ul class="nav-list">
           <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -34,24 +37,26 @@
   <main>
 
     <!-- =========================================================
-         SECCIÓN SOBRE MÍ: presentación personal con imagen
+         SECCIÓN SOBRE MÍ: presentación personal con imagen y bio.
+         Idea futura: agregar botón para descargar CV en PDF.
     ========================================================= -->
     <section id="sobre-mi">
       <div class="sobre-mi-inner">
         <div class="sobre-mi-texto">
           <p class="sobre-mi-tag">— Hola, soy</p>
-          <h1 class="sobre-mi-nombre">NovaByte</h1>
-          <p class="sobre-mi-subtitulo">Estudiante de Desarrollo Web</p>
+          <h1 class="sobre-mi-nombre">Gisela Croci</h1>
+          <p class="sobre-mi-subtitulo">Estudiante de Desarrollo Web &amp; Automatización</p>
           <p class="sobre-mi-bio">
             Estoy dando mis primeros pasos en el mundo del desarrollo frontend,
-            aprendiendo a construir experiencias digitales con HTML, CSS y mucha curiosidad.
-            Me interesa la tecnología, la música y todo lo que
+            construyendo experiencias digitales con HTML, CSS y mucha curiosidad.
+            También trabajo con automatizaciones, integración de software y flujos
+            sin código. Me interesa la tecnología, la música y todo lo que
             tenga buena historia detrás.
           </p>
           <a href="#contacto" class="btn-primario">Escribime</a>
         </div>
         <div class="sobre-mi-imagen-wrapper">
-        
+          <!-- Imagen de perfil: reemplazable por avatar, IA o mascota -->
           <img
             src="img/img-gisela/imagen.jpg"
             alt="Avatar de NovaByte, una mujer con rasgos amigables en colores cálidos"
@@ -62,7 +67,8 @@
     </section>
 
     <!-- =========================================================
-         SECCIÓN PROYECTOS
+         SECCIÓN PROYECTOS: tarjetas con Flexbox.
+         Idea futura: agregar links reales a cada proyecto en GitHub.
     ========================================================= -->
     <section id="tarjetas">
       <div class="seccion-inner">
@@ -83,8 +89,8 @@
               <span class="tarjeta-tag">HTML · CSS</span>
               <h3 class="tarjeta-titulo">Portafolio Personal</h3>
               <p class="tarjeta-texto">
-                Mi primer proyecto web: este mismo sitio. Construido con HTML semántico,
-                CSS.
+                Mi primer proyecto web: este mismo sitio. Construido desde cero con
+                HTML semántico, CSS puro, Flexbox y diseño responsivo.
               </p>
             </div>
           </article>
@@ -92,17 +98,17 @@
           <article class="tarjeta">
             <div class="tarjeta-imagen-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80"
-                alt="Laptop con código abierto sobre un escritorio"
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+                alt="Diagrama de flujo de automatización con nodos conectados"
                 class="tarjeta-imagen"
               />
             </div>
             <div class="tarjeta-cuerpo">
-              <span class="tarjeta-tag">En progreso</span>
-              <h3 class="tarjeta-titulo">Próximo Proyecto</h3>
+              <span class="tarjeta-tag">n8n · Automatización</span>
+              <h3 class="tarjeta-titulo">Flujos de Automatización</h3>
               <p class="tarjeta-texto">
-                Actualmente explorando JavaScript para agregar interactividad.
-                Pronto habrá algo concreto acá.
+                Flujos en n8n que conectan formularios, hojas de cálculo y notificaciones
+                automáticas. Reducir tareas repetitivas con lógica visual y sin código.
               </p>
             </div>
           </article>
@@ -110,17 +116,17 @@
           <article class="tarjeta">
             <div class="tarjeta-imagen-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80"
-                alt="Líneas de código coloridas en pantalla oscura"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+                alt="Pantalla con dashboard e interfaces conectadas"
                 class="tarjeta-imagen"
               />
             </div>
             <div class="tarjeta-cuerpo">
-              <span class="tarjeta-tag">Aprendizaje</span>
-              <h3 class="tarjeta-titulo">Ejercicios</h3>
+              <span class="tarjeta-tag">APIs · Integración</span>
+              <h3 class="tarjeta-titulo">Conexión de Software</h3>
               <p class="tarjeta-texto">
-                Colección de experimentos.
-                El caos controlado también es un proyecto.
+                Integración entre herramientas usando webhooks, APIs REST e interfaces
+                personalizadas. Haciendo que distintos sistemas hablen entre sí.
               </p>
             </div>
           </article>
@@ -130,7 +136,9 @@
     </section>
 
     <!-- =========================================================
-         SECCIÓN HABILIDADES
+         SECCIÓN HABILIDADES: tabla con tecnologías, aprendizajes
+         futuros y hobbies.
+         Idea futura: agregar barras de progreso animadas por skill.
     ========================================================= -->
     <section id="habilidades">
       <div class="seccion-inner">
@@ -149,26 +157,31 @@
             <tr>
               <td>HTML5</td>
               <td>JavaScript</td>
-              <td>Música</td>
+              <td>🎵 Música</td>
             </tr>
             <tr>
-              <td>CSS</td>
+              <td>CSS3 &amp; Flexbox</td>
               <td>React</td>
-              <td>Idiomas</td>
+              <td>🌍 Idiomas</td>
             </tr>
             <tr>
-              <td>Flexbox &amp; Grid</td>
+              <td>n8n (automatización)</td>
               <td>Node.js</td>
-              <td>Gaming</td>
+              <td>🎮 Gaming</td>
             </tr>
             <tr>
-              <td>Git &amp; GitHub</td>
+              <td>Integración de APIs</td>
               <td>Accesibilidad Web</td>
-              <td>Cine &amp; Series</td>
+              <td>🎬 Cine &amp; Series</td>
             </tr>
             <tr>
-              <td>VS Code</td>
+              <td>Conexión de software</td>
               <td>TypeScript</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Git &amp; GitHub · VS Code</td>
+              <td>Python</td>
               <td></td>
             </tr>
           </tbody>
@@ -177,12 +190,13 @@
     </section>
 
     <!-- =========================================================
-         SECCIÓN PELÍCULAS FAVORITAS.
+         SECCIÓN PELÍCULAS FAVORITAS: 3 películas con imagen,
+         título y descripción personal.
     ========================================================= -->
     <section id="peliculas">
       <div class="seccion-inner">
         <h2 class="seccion-titulo">Películas Favoritas</h2>
-        <p class="seccion-subtitulo"></p>
+        <p class="seccion-subtitulo">Tres historias que me marcaron.</p>
 
         <div class="peliculas-grid">
 
@@ -241,7 +255,10 @@
       </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
+    <!-- =========================================================
+         SECCIÓN CONTACTO: formulario con nombre, apellido,
+         email y teléfono.
+    ========================================================= -->
     <section id="contacto">
       <div class="seccion-inner contacto-inner">
         <h2 class="seccion-titulo">Contacto</h2>
@@ -280,7 +297,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER: información adicional y redes sociales -->
   <footer>
     <div class="footer-inner">
       <span class="logo footer-logo">Nova<span class="logo-accent">Byte</span></span>

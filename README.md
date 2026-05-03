@@ -36,21 +36,30 @@ El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin framewo
 ```
 TP1_Grupo_3/
 ├── index.html        <- Portada principal del grupo
-├── gisela.html       <- Pagina individual de Gisela Croci (en desarrollo)
+├── gisela.html       <- Pagina individual de Gisela Croci 
 ├── fernanda.html     <- Pagina individual de Fernanda Flores (en desarrollo)
 ├── pamela.html       <- Pagina individual de Pamela Olave
 ├── andrea.html       <- Pagina individual de Andrea Maccan
+├── guillermo.html    <- Pagina individual de Guillermo Benitez
 ├── bitacora.html     <- Bitacora del proyecto
 ├── css/
 │   ├── styles.css    <- Estilos principales compartidos
 │   ├── pamela.css    <- Estilos de la pagina de Pamela
-│   └── andrea.css    <- Estilos de la pagina de Andrea
+│   ├── andrea.css    <- Estilos de la pagina de Andrea
+│   ├── guillermo.css <- Estilos de la pagina de Guillermo
+│   ├── gisela.css    <- Estilos de la pagina de Gisela
+│   └── fernanda.css  <- Estilos de la pagina de Fernanda
 ├── js/
 │   ├── main.js       <- JavaScript de la portada
+│   ├── guillermo.js  <- JavaScript de la pagina de Guillermo
 │   └── andrea.js     <- JavaScript de la pagina de Andrea
 ├── img/
-│   └── img Pamela/   <- Imagenes de la pagina de Pamela
-│   └── imgs-andrea/  <- Imagenes de la pagina de Andrea
+│   ├── img Pamela/   <- Imagenes de la pagina de Pamela
+│   ├── img-gisela/   <- Imagenes de la pagina de Gisela
+│   ├── img-guillermo/<- Imagenes de la pagina de Guillermo
+│   ├── imgs-andrea/  <- Imagenes de la pagina de Andrea
+│   ├── andrea.jpg    <- Imagen de Andrea
+│   └── fernanda.jpg  <- Imagen de Fernanda
 └── README.md
 ```
 

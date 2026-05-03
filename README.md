@@ -44,15 +44,16 @@ TP1_Grupo_3/
 ├── bitacora.html     <- Bitacora del proyecto
 ├── css/
 │   ├── styles.css    <- Estilos principales compartidos
-│   ├── pamela.css    <- Estilos de la pagina de Pamela
-│   ├── andrea.css    <- Estilos de la pagina de Andrea
-│   ├── guillermo.css <- Estilos de la pagina de Guillermo
-│   ├── gisela.css    <- Estilos de la pagina de Gisela
-│   └── fernanda.css  <- Estilos de la pagina de Fernanda
+│   ├── pamela.css    <- Estilos de la pagina de Andrea
+│   ├── andrea.css    <- Estilos de la pagina de Fernanda
+│   ├── guillermo.css <- Estilos de la pagina de Gisela
+│   ├── gisela.css    <- Estilos de la pagina de Guillermo
+│   └── fernanda.css  <- Estilos de la pagina de Pamela
 ├── js/
 │   ├── main.js       <- JavaScript de la portada
-│   ├── guillermo.js  <- JavaScript de la pagina de Guillermo
-│   └── andrea.js     <- JavaScript de la pagina de Andrea
+│   ├── guillermo.js  <- JavaScript de la pagina de Andrea
+│   ├── gisela.js     <- JavaScript de la pagina de Gisela
+│   └── andrea.js     <- JavaScript de la pagina de Guillermo
 ├── img/
 │   ├── img Pamela/   <- Imagenes de la pagina de Pamela
 │   ├── img-gisela/   <- Imagenes de la pagina de Gisela
@@ -130,20 +131,23 @@ Función que carga una imagen aleatoria de un gato desde la API externa (cataas.
 **cerrarPopup()**  
 Función que cierra el popup del gatito. Se ejecuta al hacer click en el botón "Cerrar" o al hacer click fuera del contenido del popup.
 
-### Página de Fernanda (fernanda.html)
+### Página de Gisela (gisela.html)
 
-**Navegación activa por scroll**
-Al hacer scroll por la página, se detecta automáticamente qué sección está visible
-en pantalla y se marca el enlace correspondiente en la barra de navegación con la clase `active`.
+**animarAlScrollear()**  
+Al hacer scroll, los elementos con clase `animar` (tarjetas, títulos y secciones) aparecen
+con un efecto de fade-in combinado con un deslizamiento suave desde abajo. Cada elemento
+se anima una sola vez al entrar al viewport y no repite la animación al volver a subir.
 
-**Portadas dinámicas de discos**
-Al cargar la página, se consulta la API pública de iTunes para cada álbum listado
-en la sección de música. Si encuentra resultados, reemplaza el placeholder con letra
-por la portada real del disco en alta resolución. Si la petición falla, conserva el diseño de fallback.
+**formularioConPopup()**  
+Al completar y enviar el formulario de contacto, se intercepta el submit para evitar la
+redirección de página. El formulario se limpia automáticamente y aparece un popup azul
+en la parte inferior de la pantalla confirmando el envío. El mensaje desaparece solo
+después de 3 segundos.
+
 
 ### Páginas individuales
 
-Las paginas de Gisela y Fernanda estan en desarrollo.
+Las paginas de Fernanda estan en desarrollo.
 
 ## Diseño responsive
 

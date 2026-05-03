@@ -36,8 +36,8 @@ El proyecto fue construído unicamente con HTML5, CSS3 y JavaScript, sin framewo
 ```
 TP1_Grupo_3/
 ├── index.html        <- Portada principal del grupo
-├── gisela.html       <- Pagina individual de Gisela Croci 
-├── fernanda.html     <- Pagina individual de Fernanda Flores (en desarrollo)
+├── gisela.html       <- Pagina individual de Gisela Croci
+├── fernanda.html     <- Pagina individual de Fernanda Flores
 ├── pamela.html       <- Pagina individual de Pamela Olave
 ├── andrea.html       <- Pagina individual de Andrea Maccan
 ├── guillermo.html    <- Pagina individual de Guillermo Benitez
@@ -48,7 +48,7 @@ TP1_Grupo_3/
 │   ├── andrea.css    <- Estilos de la pagina de Fernanda
 │   ├── guillermo.css <- Estilos de la pagina de Gisela
 │   ├── gisela.css    <- Estilos de la pagina de Guillermo
-│   └── fernanda.css  <- Estilos de la pagina de Pamela
+│   └── fernanda.css  <- Estilos de la pagina de Fernanda
 ├── js/
 │   ├── main.js       <- JavaScript de la portada
 │   ├── guillermo.js  <- JavaScript de la pagina de Andrea
@@ -89,7 +89,7 @@ No se utilizan librerías de íconos. Respecto a las imágenes:
 
 - **Pamela Olave:** avatar generado a partir de una foto personal real.
 - **Andrea Maccan:** caricatura generada a partir de la edición de una imagen, sólo con fines académicos.
-- **Resto de integrantes:** imagenes obtenidas de internet, utilizadas con fines academicos.
+- **Fernanda Flores:** foto personal extraída de LinkedIn, portadas de discos extraídas de iTunes.
 
 ## JavaScript — Funciones implementadas
 
@@ -144,10 +144,16 @@ redirección de página. El formulario se limpia automáticamente y aparece un p
 en la parte inferior de la pantalla confirmando el envío. El mensaje desaparece solo
 después de 3 segundos.
 
+### Página de Fernanda (fernanda.html)
 
-### Páginas individuales
+**Navegación activa por scroll**
+Al hacer scroll por la página, se detecta automáticamente qué sección está visible
+en pantalla y se marca el enlace correspondiente en la barra de navegación con la clase `active`.
 
-Las paginas de Fernanda estan en desarrollo.
+**Portadas dinámicas de discos**
+Al cargar la página, se consulta la API pública de iTunes para cada álbum listado
+en la sección de música. Si encuentra resultados, reemplaza el placeholder con letra
+por la portada real del disco en alta resolución. Si la petición falla, conserva el diseño de fallback.
 
 ## Diseño responsive
 

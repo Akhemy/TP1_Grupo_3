@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitácora — Grupo 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navegacion -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">Grupo 3</div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="bitacora.html" class="nav-link activo">Bitácora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!--   ENCABEZADO DE BITÁCORA   -->
+      <div class="pagina-header">
+        <h1 class="pagina-nombre">Bitácora del proyecto</h1>
+        <p class="pagina-rol">
+          Registro del proceso de desarrollo — TP1 Grupal
+        </p>
+        <a href="index.html" class="btn-volver">Volver al inicio</a>
+      </div>
+
+      <div class="pagina-contenido">
+        <!--  FASE 1: INICIO GRUPAL  -->
+        <h2 class="bloque-titulo">Fase 1 — Inicio del proyecto</h2>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">11 de Abril de 2026 — Inicio del proyecto</p>
+          <h3 class="bitacora-subtitulo">
+            Organización del equipo y estructura del sitio
+          </h3>
+          <p class="bitacora-texto">
+            Se inició el trabajo de forma grupal. Acordando la estructura
+            general del sitio, se configuró el repositorio compartido en
+            GitHub. Se decidió tomar como base los portafolios personales
+            del PFO individual anterior.
+          </p>
+        </div>
+
+        <!--  FASE 2: TRABAJO GRUPAL  -->
+        <h2 class="bloque-titulo">Fase 2 — Trabajo grupal</h2>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril de 2026 — Decisiones de diseño</p>
+          <h3 class="bitacora-subtitulo">
+            Elección de la estética y las tipografías
+          </h3>
+          <p class="bitacora-texto">
+            En conjunto se definió la identidad visual del proyecto: paleta
+            oscura con fondos en tonos casi negros (#111 / #1a1a1a) y acento
+            dorado-cobre (#c8a96e). Se eligió <strong>DM Serif Display</strong>
+            para títulos y <strong>DM Sans</strong> para el cuerpo del texto.
+            La estética buscada fue la de un portfolio editorial elegante,
+            coherente para las secciones grupales y dejando libre la
+            personalización de cada página individual.
+          </p>
+        </div>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril de 2026 — Implementación</p>
+          <h3 class="bitacora-subtitulo">
+            Estructura de archivos y responsive design
+          </h3>
+          <p class="bitacora-texto">
+            Se construyeron en conjunto el <code>index.html</code> y esta
+            <code>bitacora.html</code>, el CSS compartido
+            (<code>css/styles.css</code>) y el JavaScript principal
+            (<code>js/main.js</code>). Organizamos los archivos siguiendo las
+            buenas prácticas pedidas: HTML en la raíz, CSS en la carpeta
+            <code>css/</code>, JavaScript en la carpeta <code>js/</code> e
+            imágenes en <code>img/</code>. Implementamos tres breakpoints con
+            media queries: 600px para móviles, 900px para tablets y 1200px
+            para pantallas grandes. La grilla de integrantes pasa de 3 columnas
+            a 2 y luego a 1 según el tamaño de pantalla.
+          </p>
+        </div>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">Abril de 2026 — Dificultades</p>
+          <h3 class="bitacora-subtitulo">
+            Problemas encontrados y cómo se resolvieron
+          </h3>
+          <p class="bitacora-texto">
+            El flujo de trabajo no presentó grandes dificultades. Se trabajó
+            de forma asincrónica: se desarrolló lo explicado en la primera fase
+            de forma conjunta, luego cada integrante desarrolló en su propia
+            rama, realizando commits de sus avances, y coordinando por WhatsApp
+            para acordar los merges a main y mantener el repositorio actualizado.
+          </p>
+        </div>
+
+        <!--  FASE 3: TRABAJO INDIVIDUAL  -->
+        <h2 class="bloque-titulo">Fase 3 — Páginas individuales (últimas dos semanas)</h2>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">19 de Abril — 2 de Mayo de 2026</p>
+          <h3 class="bitacora-subtitulo">Portafolio</h3>
+          <p class="bitacora-texto">
+            Se desarrollaron las páginas individuales: secciones de
+            presentación, habilidades y contenido de interés personal.
+          </p>
+        </div>
+
+        <!--  FASE 4: INTEGRACIÓN Y DEPLOY  -->
+        <h2 class="bloque-titulo">Fase 4 — Integración y publicación</h2>
+
+        <div class="bitacora-entrada">
+          <p class="bitacora-fecha">3 de Mayo de 2026 — Cierre del TP1</p>
+          <h3 class="bitacora-subtitulo">Unificación del proyecto y deploy a Vercel</h3>
+          <p class="bitacora-texto">
+            Se realizó la última unificación del proyecto en un único
+            repositorio, se revisó la coherencia visual y los links de
+            navegación entre secciones, y se realizó la publicación final
+            del sitio en Vercel.
+          </p>
+        </div>
+
+        <!-- Navegacion al final -->
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="index.html" class="btn-volver">Volver al inicio</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-grupo">Grupo 3 — IFTS N.29</p>
+        <p class="footer-materia">
+          Desarrollo de Sistemas Web — Frontend — 2026
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="bitacora.html" class="footer-link">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,498 @@
+/* Estilos pagina Pamela */
+
+/* Variables */
+.pagina-pamela {
+  --fondo-card:       #0e0a1e;
+  --fondo-item:       #150f28;
+  --acento:           #9b72e8;
+  --acento-brillante: #c4a0ff;
+  --dorado:           #c8a232;
+  --dorado-claro:     #e8c050;
+  --dorado-suave:     #9a7822;
+  --borde-dorado:     #6b5010;
+  --radio:            8px;
+  --radio-grande:     14px;
+  --transicion:       0.3s ease;
+}
+
+/* Canvas estrellas fugaces */
+#p-estrellas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Hero */
+.p-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(80, 40, 140, 0.55) 0%, transparent 65%),
+    radial-gradient(ellipse at 20% 80%, rgba(140, 80, 20, 0.2) 0%, transparent 50%),
+    url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.p-hero-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 2, 10, 0.55);
+  padding: 6rem 2rem 4rem;
+}
+
+
+.p-hero-contenido {
+  text-align: center;
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
+  animation: p-aparecer 1s ease both;
+}
+
+.p-hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--dorado);
+  margin: 0 auto 1.8rem;
+  box-shadow: 0 0 40px rgba(200, 162, 50, 0.35);
+  object-fit: cover;
+}
+
+.p-hero-titulo {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #e8c050;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 40px rgba(200, 162, 50, 0.35);
+}
+
+#p-profesion::after {
+  content: '|';
+  color: #c8a232;
+  animation: p-parpadeo 0.8s step-end infinite;
+}
+
+@keyframes p-parpadeo {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.p-hero-profesion {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 400;
+  color: #c8a232;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+
+.p-hero-bio {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--texto-suave);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+
+.p-btn-cta {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e8c050;
+  border: 1px solid #c8a232;
+  padding: 1rem 2.8rem;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.p-btn-cta:hover {
+  background: rgba(200, 162, 50, 0.12);
+  box-shadow: 0 0 30px rgba(200, 162, 50, 0.25);
+  color: #fff;
+}
+
+/* Secciones */
+.p-seccion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.p-seccion-titulo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #6b5010;
+}
+
+.p-seccion-titulo-wrap::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: linear-gradient(to bottom, #c8a232, transparent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.p-seccion-titulo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #c8a232;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Tarjetas */
+.p-tarjetas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.p-tarjeta {
+  background: #0e0a1e;
+  border: 1px solid #6b5010;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.p-tarjeta:hover {
+  border-color: #c8a232;
+  box-shadow: 0 0 30px rgba(200, 162, 50, 0.15);
+  transform: translateY(-4px);
+}
+
+.p-tarjeta-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0e0a1e;
+  border: 1px solid #6b5010;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 0.9rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #c8a232;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.p-tarjeta-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(0.75);
+  transition: filter 0.3s ease;
+  display: block;
+}
+
+.p-tarjeta:hover .p-tarjeta-img {
+  filter: brightness(1) saturate(1);
+}
+
+.p-tarjeta-img-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #08051a;
+  padding: 1.2rem;
+  filter: brightness(0.9) saturate(0.8);
+  transition: filter 0.3s ease;
+  display: block;
+}
+
+.p-tarjeta:hover .p-tarjeta-img-logo {
+  filter: brightness(1) saturate(1);
+}
+
+.p-tarjeta-img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #150f28 60%, #1e1535);
+  border-bottom: 1px solid #6b5010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-tarjeta-img-placeholder span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  color: #6b5010;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.p-tarjeta-img-poster {
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  background: #000;
+  width: 100%;
+}
+
+.p-tarjeta-cuerpo {
+  padding: 1.2rem 1.1rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.p-tarjeta-titulo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e8c050;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.p-tarjeta-desc {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Habilidades */
+.p-habilidades-bloque {
+  margin-bottom: 2rem;
+}
+
+.p-bloque-subtitulo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #c8a232;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.8rem;
+}
+
+.p-botones-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.p-hab-boton {
+  background: #150f28;
+  border: 1px solid #6b5010;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 0.82rem;
+  font-family: 'Raleway', sans-serif;
+  color: var(--texto-suave);
+  transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p-hab-boton:hover {
+  border-color: #c8a232;
+  color: #e8c050;
+  box-shadow: 0 0 12px rgba(200, 162, 50, 0.15);
+}
+
+.p-tabla-hobbies {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.p-tabla-hobbies th {
+  text-align: left;
+  color: #c8a232;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid #6b5010;
+}
+
+.p-tabla-hobbies td {
+  padding: 0.55rem 0.9rem;
+  color: var(--texto);
+  border-bottom: 1px solid rgba(107, 80, 16, 0.3);
+  transition: background 0.3s ease;
+}
+
+.p-tabla-hobbies tr:hover td {
+  background: rgba(200, 162, 50, 0.05);
+}
+
+/* Formulario */
+.p-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 680px;
+}
+
+.p-fila-formulario {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.p-grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.p-grupo-campo label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #c8a232;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.p-grupo-campo input {
+  background: #150f28;
+  border: 1px solid #6b5010;
+  border-radius: 8px;
+  color: var(--texto);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p-grupo-campo input::placeholder { color: rgba(196, 186, 216, 0.3); }
+
+.p-grupo-campo input:focus {
+  border-color: #c8a232;
+  box-shadow: 0 0 0 3px rgba(200, 162, 50, 0.1);
+}
+
+.p-btn-enviar {
+  background: transparent;
+  color: #e8c050;
+  border: 1px solid #c8a232;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.p-btn-enviar:hover {
+  background: rgba(200, 162, 50, 0.12);
+  box-shadow: 0 0 24px rgba(200, 162, 50, 0.2);
+  color: #fff;
+}
+
+.p-exito-mensaje {
+  background: rgba(200, 162, 50, 0.07);
+  border: 1px solid rgba(200, 162, 50, 0.3);
+  color: #e8c050;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+}
+
+/* Navegacion entre portfolios */
+.p-nav-portfolios {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Animacion */
+@keyframes p-aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive 900px */
+@media (max-width: 900px) {
+  .p-tarjetas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .p-seccion {
+    padding: 3rem 1.5rem;
+  }
+  .p-hero-titulo {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+}
+
+/* Responsive 580px */
+@media (max-width: 580px) {
+  .p-hero-overlay {
+    padding: 5rem 1.2rem 3rem;
+  }
+  .p-tarjetas-grid {
+    grid-template-columns: 1fr;
+  }
+  .p-seccion {
+    padding: 2.5rem 1rem;
+  }
+  .p-fila-formulario {
+    flex-direction: column;
+  }
+  .p-grupo-campo {
+    min-width: unset;
+    width: 100%;
+  }
+  .p-btn-enviar {
+    width: 100%;
+    text-align: center;
+  }
+}
